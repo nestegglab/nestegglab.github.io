@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nest Egg Lab</title>
+<meta name="description" content="Nest Egg Lab is a nonprofit that studies how wealth passes between generations and works to make family-office-style planning available to every family.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --ink: #1d2422;
+    --muted: #5b6662;
+    --line: #e4e1d9;
+    --accent: #2f6b55;
+    --accent-soft: #e6f0eb;
+    --max: 760px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141816;
+      --surface: #1b201e;
+      --ink: #e8ece9;
+      --muted: #a3ada8;
+      --line: #2c3431;
+      --accent: #7fc0a4;
+      --accent-soft: #1f2d27;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif;
+  }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  header { padding: 56px 0 32px; border-bottom: 1px solid var(--line); }
+  .brand {
+    font: 600 15px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent);
+  }
+  h1 { font-size: 40px; line-height: 1.15; margin: 18px 0 14px; font-weight: 600; }
+  .lede { font-size: 20px; color: var(--muted); margin: 0; }
+  section { padding: 36px 0; border-bottom: 1px solid var(--line); }
+  h2 {
+    font: 600 13px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px;
+  }
+  h3 { font-size: 21px; margin: 0 0 8px; font-weight: 600; }
+  p { margin: 0 0 14px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px;
+  }
+  .tag {
+    display: inline-block; font: 600 12px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 6px 10px; margin-bottom: 12px;
+  }
+  .paper { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; padding: 20px 22px; }
+  .paper .title { font-size: 19px; font-weight: 600; margin-bottom: 6px; }
+  .meta { color: var(--muted); font-size: 15px; }
+  ul.principles { padding-left: 20px; margin: 0; }
+  ul.principles li { margin-bottom: 8px; }
+  a { color: var(--accent); }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 640px) {
+    h1 { font-size: 31px; }
+    .lede { font-size: 18px; }
+    .grid { grid-template-columns: 1fr; }
+    header { padding-top: 40px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Nest Egg Lab</div>
+    <h1>Family-office thinking for every family.</h1>
+    <p class="lede">Nest Egg Lab is a nonprofit that studies how wealth passes between generations and works to make the long-term planning tools of the very wealthy available to ordinary families.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>What we do</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Research</span>
+        <h3>How wealth passes between generations</h3>
+        <p>We study gifts, bequests, trusts and the tax rules around them, and what they mean for how wealth is distributed. Our work is quantitative and nonpartisan, and each paper is published with its model, code and decision log.</p>
+      </div>
+      <div class="card">
+        <span class="tag">In development</span>
+        <h3>Nest eggs</h3>
+        <p>We are designing a program that gives families a starting stake in a low-cost index fund, paired with the kind of long-term planning guidance family offices provide to the wealthy. Details will be posted here as the program takes shape.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Research</h2>
+    <div class="paper">
+      <div class="title">Hidden Dynasties: Dynasty Trusts and the Concentration of Wealth</div>
+      <p>A calibrated model of how dynasty trusts affect the share of wealth held by the richest families, and how much of that effect official statistics miss.</p>
+      <div class="meta">Working paper, 2026. Paper and code: coming soon.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How we work</h2>
+    <ul class="principles">
+      <li><strong>Nonpartisan.</strong> We study how the rules work and what they do, and leave the policy choices to others.</li>
+      <li><strong>Open.</strong> Models, code and data sources are public, so anyone can check or extend the work.</li>
+      <li><strong>Careful.</strong> Predictions are recorded before results are run, and misses are reported.</li>
+      <li><strong>Transparent about tools.</strong> Where AI tools assist our research, we say so.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>About</h2>
+    <p>Nest Egg Lab was founded in 2026 by Richard Berk (<a href="https://orcid.org/0009-0004-5344-4614">ORCID 0009-0004-5344-4614</a>), who holds a BA in economics and a Master of Accountancy from Case Western Reserve University and has a background in public accounting and tax.</p>
+    <p>Nest Egg Lab is a nonprofit corporation incorporated in Delaware. It is applying for recognition of tax-exempt status under section 501(c)(3).</p>
+    <p>Contact: <a href="mailto:richard.berk@nestegglab.org">richard.berk@nestegglab.org</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Nest Egg Lab</div>
+</footer>
+</body>
+</html>
