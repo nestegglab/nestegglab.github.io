@@ -41,6 +41,17 @@
   ul.brakes span { color: var(--muted); font-size: 15px; }
   .meta { color: var(--muted); font-size: 15px; }
   .quote { font-size: 22px; line-height: 1.4; border-left: 3px solid var(--accent); padding-left: 18px; margin: 0 0 18px; }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin: 0 0 12px; }
+  details > summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 20px; font-size: 19px; font-weight: 600; position: relative; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font: 400 24px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--accent); }
+  details[open] > summary::after { content: "\2212"; }
+  details > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 10px; }
+  details .sub { display: block; font-size: 15px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  details .body { padding: 0 20px 18px; }
+  details .body .grid { margin-top: 4px; }
+  details .card { background: var(--bg); }
+  details ul.brakes li { background: var(--bg); }
   footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
   @media (max-width: 640px) {
     h1 { font-size: 28px; } .lede { font-size: 18px; } .quote { font-size: 19px; }
@@ -53,56 +64,63 @@
   <div class="wrap">
     <a class="brand" href="./">Nest Egg Lab</a>
     <h1>How family fortunes last</h1>
-    <p class="lede">Our research studies how families pass things on across generations, what has kept that inheritance in balance, and what the largest fortunes reveal about it.</p>
+    <p class="lede">How families pass things on across generations, what has kept that inheritance in balance, and what the largest fortunes reveal about it.</p>
   </div>
 </header>
 
 <main class="wrap">
   <section>
-    <h2>Our view</h2>
+    <h2>The idea</h2>
     <p class="quote">Every family that lasts passes something on: land, knowledge, relationships, money.</p>
-    <p>A forager band shares out a hunt so no household gets far ahead. A medieval estate passes whole to the eldest son so the land is never divided. A modern family meets with its trustee to decide what the next generation will receive. Three moments, one question: what gets passed on, to whom, and what keeps it in balance?</p>
-    <p>For most of history that inheritance was held in check. It was shared out among heirs, spent down, taxed, or simply ended when a family line died out. Modern dynasty trusts and family offices are the first institutions designed to keep a fortune compounding indefinitely. They do it by changing what a family is: not a household that divides its wealth every generation, but a lineage that never ends, with its capital held in one pool and its members as beneficiaries.</p>
-    <p>These structures also do real good. They keep family businesses whole, care for dependents, and pass on habits of stewardship along with money. We study how they work, what has kept inheritance in balance, and how the tools that hold the wealthiest families together could serve every family instead of a few.</p>
+    <p>For most of history that inheritance was held in check. It was shared out among heirs, spent down, taxed, or simply ended when a family line died out. Modern dynasty trusts and family offices are the first institutions designed to keep a fortune compounding indefinitely, by treating a family not as a household that divides its wealth every generation but as a lineage that never ends.</p>
+    <p>These structures also do real good: they keep family businesses whole, care for dependents and pass on habits of stewardship. The aim is to pump the brakes, not throw out the car, and to ask how the tools that hold the wealthiest families together could serve every family.</p>
   </section>
 
   <section>
-    <h2>What families pass on</h2>
-    <p>Families have never lived alone. Bands traded, married and formed alliances with neighbouring bands, and much of what a family could pass on depended on those ties. Wealthy families today do the same through marriage, shared investments, foundation boards and networks of family offices. We look at inheritance within families and the dealings between them.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Money</h3>
-        <p>Material wealth passes most easily from one generation to the next, and it is what trusts are designed to hold.</p>
-      </div>
-      <div class="card">
-        <h3>Skills and stewardship</h3>
-        <p>Knowledge, judgment and habits of care have to be rebuilt in every generation. Families that last tend to work at this deliberately.</p>
-      </div>
-      <div class="card">
-        <h3>Relationships and standing</h3>
-        <p>Leadership of a family firm or foundation, board seats, a name, introductions. These are not divided among heirs and are not taxed, and they may be the most durable inheritance of all.</p>
-      </div>
-      <div class="card">
-        <h3>A long view</h3>
-        <p>US dynasty trusts and family offices are only three to five generations old. English records, which follow families for centuries, show status persisting far longer than any single parent-to-child link would suggest.</p>
-      </div>
-    </div>
-  </section>
+    <h2>Explore</h2>
 
-  <section>
-    <h2>The brakes</h2>
-    <p>Several forces have historically limited how long a fortune keeps compounding. We call them brakes. Our interest is in pumping the brakes, not throwing out the car: understanding which brakes still work, which have been removed, and what that means for families.</p>
-    <ul class="brakes">
-      <li><strong>Division among heirs</strong><span>Each generation splits a fortune among more people. In many societies this has been the main brake on lasting wealth.</span></li>
-      <li><strong>Lines that die out</strong><span>In late medieval England about a quarter of noble families failed in the direct male line each generation, and their estates passed to daughters or cousins, often into other families. In the late Roman Republic only about a third of consuls had a son who also became consul.</span></li>
-      <li><strong>Payouts to heirs</strong><span>Income paid out and spent is no longer compounding.</span></li>
-      <li><strong>Tax at each generation</strong><span>Estate and generation-skipping taxes apply when wealth passes down, unless it is sheltered.</span></li>
-      <li><strong>Trusts that end</strong><span>Traditional trusts ended after a generation or two and divided their assets among heirs.</span></li>
-      <li><strong>Costs along the way</strong><span>Income tax inside the trust, trustee fees and administration.</span></li>
-    </ul>
-    <p>Every era has invented a way around division: primogeniture, entail, family foundations, and today the dynasty trust, which can be split into separate trusts for each branch of a family while the capital stays inside, sheltered and compounding. Many modern trusts also file little or nothing with tax authorities, and the US Treasury has said it has no data on the wealth held in domestic trusts. What we cannot see is part of what we study.</p>
-  </section>
+    <details>
+      <summary>Three moments, one question<span class="sub">Inheritance from forager bands to family offices</span></summary>
+      <div class="body">
+        <p>A forager band shares out a hunt so no household gets far ahead. A medieval estate passes whole to the eldest son so the land is never divided. A modern family meets with its trustee to decide what the next generation will receive.</p>
+        <p>Each asks the same thing: what gets passed on, to whom, and what keeps it in balance? Families have also never lived alone. Bands traded, married and formed alliances with their neighbours, and wealthy families today do the same through marriage, shared investments, foundation boards and networks of family offices. Inheritance happens within families and between them.</p>
+      </div>
+    </details>
 
+    <details>
+      <summary>What families pass on<span class="sub">Money is only part of it</span></summary>
+      <div class="body">
+        <div class="grid">
+          <div class="card"><h3>Money</h3><p>Material wealth passes most easily from one generation to the next, and it is what trusts are designed to hold.</p></div>
+          <div class="card"><h3>Skills and stewardship</h3><p>Knowledge, judgment and habits of care have to be rebuilt in every generation. Families that last tend to work at this deliberately.</p></div>
+          <div class="card"><h3>Relationships and standing</h3><p>Leadership of a family firm or foundation, board seats, a name, introductions. These are not divided among heirs and are not taxed, and may be the most durable inheritance of all.</p></div>
+          <div class="card"><h3>A long view</h3><p>US dynasty trusts and family offices are only three to five generations old. English records, which follow families for centuries, show status persisting far longer than any single parent-to-child link would suggest.</p></div>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>The brakes<span class="sub">Six forces that have limited how long a fortune compounds</span></summary>
+      <div class="body">
+        <ul class="brakes">
+          <li><strong>Division among heirs</strong><span>Each generation splits a fortune among more people. In many societies this has been the main brake on lasting wealth.</span></li>
+          <li><strong>Lines that die out</strong><span>In late medieval England about a quarter of noble families failed in the direct male line each generation, and their estates passed to daughters or cousins, often into other families. In the late Roman Republic only about a third of consuls had a son who also became consul.</span></li>
+          <li><strong>Payouts to heirs</strong><span>Income paid out and spent is no longer compounding.</span></li>
+          <li><strong>Tax at each generation</strong><span>Estate and generation-skipping taxes apply when wealth passes down, unless it is sheltered.</span></li>
+          <li><strong>Trusts that end</strong><span>Traditional trusts ended after a generation or two and divided their assets among heirs.</span></li>
+          <li><strong>Costs along the way</strong><span>Income tax inside the trust, trustee fees and administration.</span></li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Getting around the brakes<span class="sub">From entail to the dynasty trust</span></summary>
+      <div class="body">
+        <p>Every era has invented a way around division: primogeniture, entail, family foundations, and today the dynasty trust. A dynasty trust can be split into separate trusts for each branch of a family while the capital stays inside, sheltered from tax at each generation and still compounding.</p>
+        <p>Much of this is hard to see. Many modern trusts file little or nothing with tax authorities, and the US Treasury has said it has no data on the wealth held in domestic trusts. Measuring what official statistics miss is part of the work.</p>
+      </div>
+    </details>
+  </section>
 
   <section>
     <h2>Research areas</h2>
@@ -110,13 +128,13 @@
       <div class="card">
         <span class="tag">Active</span>
         <h3>Trusts</h3>
-        <p>What dynasty trusts do to wealth concentration, and what the historical record of American trusts shows: their size, payouts, costs and funding since the 1950s.</p>
+        <p>What dynasty trusts do to wealth concentration, and what the record of American trusts shows: their size, payouts, costs and funding since the 1950s.</p>
         <p class="meta"><a href="papers/hidden-dynasties.html">Hidden Dynasties</a> (model, working paper). A companion study measuring the trust sector from tax and financial data is in progress.</p>
       </div>
       <div class="card">
         <span class="tag">Planned</span>
         <h3>Family offices</h3>
-        <p>The organizations that manage large family fortunes: who runs them, what they cost, how they make decisions about trusts and payouts, and how visible they are in public data.</p>
+        <p>The organizations that manage large family fortunes: who runs them, what they cost, how they decide on trusts and payouts, and how visible they are in public data.</p>
       </div>
       <div class="card">
         <span class="tag plain">Ongoing</span>
@@ -126,14 +144,18 @@
       <div class="card">
         <span class="tag">In development</span>
         <h3>Nest eggs for every family</h3>
-        <p>Whether the best of what wealthy families pass on (a pool of capital held for the long run, shared governance, teaching the next generation to steward it) can help ordinary families. Compounding itself is not the problem; concentration is. A few very large pools that never divide concentrate wealth, while many small ones spread it. This is a question we are testing, not a finding.</p>
+        <p>Whether the best of what wealthy families pass on (capital held for the long run, shared governance, teaching the next generation to steward it) can help ordinary families. Compounding itself is not the problem; concentration is. A few very large pools that never divide concentrate wealth, while many small ones spread it. This is an open question under test, not a finding.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>How we work</h2>
-    <p>Our research is meant to guide practical work with families, not to argue for particular policies. We build models and assemble data side by side: models show what a structure would do under stated assumptions, and data show what has actually happened. Each project records its predictions before results are run, reports its misses, and publishes its code, data sources and decision log.</p>
+    <details>
+      <summary>How the work is done<span class="sub">Models, data and a public decision log</span></summary>
+      <div class="body">
+        <p>The research is meant to guide practical work with families, not to argue for particular policies. Models and data are built side by side: models show what a structure would do under stated assumptions, and data show what has actually happened. Each project records its predictions before results are run, reports its misses, and publishes its code, data sources and decision log.</p>
+      </div>
+    </details>
   </section>
 </main>
 
