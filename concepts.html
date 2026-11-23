@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guiding Concepts · Nest Egg Lab</title>
+<meta name="description" content="The concepts that guide Nest Egg Lab: how inheritance works, the brakes that have kept it in balance, how families get around them, and what families pass on besides money.">
+<link rel="canonical" href="https://nestegglab.github.io/concepts.html">
+<style>
+  :root {
+    --bg: #fbfaf7; --surface: #ffffff; --ink: #1d2422; --muted: #5b6662;
+    --line: #e4e1d9; --accent: #2f6b55; --accent-soft: #e6f0eb; --max: 760px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141816; --surface: #1b201e; --ink: #e8ece9; --muted: #a3ada8;
+      --line: #2c3431; --accent: #7fc0a4; --accent-soft: #1f2d27;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  header { padding: 48px 0 30px; border-bottom: 1px solid var(--line); }
+  .brand { font: 600 15px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+  h1 { font-size: 36px; line-height: 1.18; margin: 18px 0 14px; font-weight: 600; }
+  .lede { font-size: 20px; color: var(--muted); margin: 0; }
+  section { padding: 34px 0; border-bottom: 1px solid var(--line); }
+  h2 { font: 600 13px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+  h3 { font-size: 20px; margin: 0 0 8px; font-weight: 600; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 22px; }
+  .card p:last-child { margin-bottom: 0; }
+  .tag { display: inline-block; font: 600 12px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 6px 10px; margin-bottom: 12px; }
+  .tag.plain { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+  ul.brakes { list-style: none; padding: 0; margin: 0 0 14px; }
+  ul.brakes li { padding: 10px 0 10px 16px; border-left: 3px solid var(--accent); margin-bottom: 10px; background: var(--surface); border-radius: 0 6px 6px 0; padding-right: 14px; }
+  ul.brakes strong { display: block; font-size: 17px; }
+  ul.brakes span { color: var(--muted); font-size: 15px; }
+  .meta { color: var(--muted); font-size: 15px; }
+  .quote { font-size: 22px; line-height: 1.4; border-left: 3px solid var(--accent); padding-left: 18px; margin: 0 0 18px; }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin: 0 0 12px; }
+  details > summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 20px; font-size: 19px; font-weight: 600; position: relative; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font: 400 24px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--accent); }
+  details[open] > summary::after { content: "\2212"; }
+  details > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 10px; }
+  details .sub { display: block; font-size: 15px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  details .body { padding: 0 20px 18px; }
+  details .body .grid { margin-top: 4px; }
+  details .card { background: var(--bg); }
+  details ul.brakes li { background: var(--bg); }
+  .ev { display: inline-block; font: 600 11px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; margin: 2px 0 10px; }
+  .src { color: var(--muted); font-size: 14px; }
+  h2.group { margin-top: 8px; }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 640px) {
+    h1 { font-size: 28px; } .lede { font-size: 18px; } .quote { font-size: 19px; }
+    .grid { grid-template-columns: 1fr; } header { padding-top: 36px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="./">Nest Egg Lab</a>
+    <h1>Guiding concepts</h1>
+    <p class="lede">The ideas that shape the research: how inheritance works, the brakes that have kept it in balance, how families get around them, and what families pass on besides money.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <p class="quote">Every family that lasts passes something on: land, knowledge, relationships, money.</p>
+    <p>Each concept below notes how strong the evidence is. <strong>Measured</strong> means from original data analysis. <strong>Documented</strong> means established in published research or official sources. <strong>Argued</strong> means a reasonable interpretation that is still debated. <strong>Open question</strong> means a working idea still being tested.</p>
+    <p class="meta">See also: <a href="research.html">Research program</a></p>
+  </section>
+
+  <section>
+    <h2 class="group">How inheritance works</h2>
+    <details>
+      <summary>Inheritance sets how much luck carries forward<span class="sub">The engine behind long-run inequality</span></summary>
+      <div class="body">
+        <span class="ev">Documented</span>
+        <p>Each generation, luck opens new gaps between families. How closely children&rsquo;s wealth follows their parents&rsquo; decides how much of that luck lasts. Long-run inequality settles where new luck balances the pull back toward the average.</p>
+        <p>Every brake weakens the link between generations. A trust that never ends, pays out little and escapes tax at each generation strengthens it.</p>
+        <p class="src">Borgerhoff Mulder, Bowles and co-authors (2009); the model in <a href="papers/hidden-dynasties.html">Hidden Dynasties</a>.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Three kinds of wealth pass on differently<span class="sub">Material, embodied and relational</span></summary>
+      <div class="body">
+        <span class="ev">Documented</span>
+        <p>Material wealth (land, herds, money) passes most easily. Embodied wealth (skill, knowledge) and relational wealth (ties, standing) have to be rebuilt by each generation.</p>
+        <p>Trusts and family offices exist largely to make material inheritance independent of the heir&rsquo;s own abilities.</p>
+        <p class="src">Borgerhoff Mulder, Bowles and co-authors (2009); Gurven and co-authors (2010).</p>
+      </div>
+    </details>
+    <details>
+      <summary>Innovation creates fortunes; rules decide whether they last<span class="sub">New wealth and old wealth</span></summary>
+      <div class="body">
+        <span class="ev">Documented</span>
+        <p>New wealth mostly comes from building something: a firm, a technology, a market. Among the Forbes 400, the share who grew up wealthy fell from 60% in 1982 to 32% in 2011, and the share who started their own business rose from 40% to 69%. New fortunes competing with old ones is itself a brake.</p>
+        <p>Whether a fortune then lasts is set by law. Farming did not create lasting inequality by itself; defensible property and recognised inheritance rights did. Dynasty-trust laws change this second part, not the first.</p>
+        <p class="src">Kaplan and Rauh (2013); Bowles and Choi (2019); Shennan (2011).</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2 class="group">The brakes</h2>
+    <details>
+      <summary>Six brakes on dynastic wealth<span class="sub">What has kept fortunes from compounding forever</span></summary>
+      <div class="body">
+        <span class="ev">Measured</span>
+        <p>Division among heirs, lines that die out, payouts to heirs, tax at each generation, trusts that end, and the taxes and costs along the way.</p>
+        <p>US trusts that file their own tax returns held a steady 3&ndash;4% of household wealth from 1954 to 2022. The brakes held for the part of the system that can be seen.</p>
+        <p class="src">IRS Statistics of Income fiduciary returns, 1954&ndash;2022.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Division among heirs is the master brake<span class="sub">And how dynasty trusts divide only on paper</span></summary>
+      <div class="body">
+        <span class="ev">Documented in law; not yet measured</span>
+        <p>Any system of land inheritance needs a way to limit heirs, or the estate is quickly broken up. Equal division among sons left tiny, unworkable plots.</p>
+        <p>Dynasty trusts can divide without releasing anything. A trust can be split into separate trusts for each branch of a family, and each keeps its exemption from generation-skipping tax. In many states a trustee can also &ldquo;decant&rdquo; a trust into a new one with new terms. Division becomes a choice made by the trustee rather than a rule applied each generation. What is divided is the right to benefit, not the money.</p>
+        <p class="src">Shennan (2011); 26 CFR 26.2642-6; Uniform Trust Decanting Act.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Lines die out, and fortunes move between families<span class="sub">Extinction as a brake</span></summary>
+      <div class="body">
+        <span class="ev">Documented</span>
+        <p>In late medieval England about a quarter of noble families failed in the direct male line each generation. Their estates passed to daughters, cousins or their husbands, often into other families. In the last two centuries of the Roman Republic only about a third of consuls had a son who also became consul.</p>
+        <p>This brake often moved a fortune sideways into another family rather than ending it. A trust for &ldquo;all descendants&rdquo; removes it.</p>
+        <p class="src">McFarlane (1973); Hopkins and Burton (1983).</p>
+      </div>
+    </details>
+    <details>
+      <summary>Individual dynasties churn while the total holds steady<span class="sub">Turnover at the top</span></summary>
+      <div class="body">
+        <span class="ev">Documented</span>
+        <p>Famous family fortunes rise and fade, and wealth spreads across thousands of descendants, while the share of wealth held at the top can stay much the same. Turnover among families and a stable total fit together.</p>
+        <p class="src">Korom and co-authors (2017).</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2 class="group">Getting around the brakes</h2>
+    <details>
+      <summary>Every era invents a device to stop division<span class="sub">From entail to the dynasty trust</span></summary>
+      <div class="body">
+        <span class="ev">Documented</span>
+        <p>Primogeniture, entail (from 1285), family-controlled churches and monasteries, the Fugger family settlements, American generation-skipping trusts, and today&rsquo;s dynasty trusts. The modern trust is the latest in a long line, not a new invention.</p>
+        <p>Its relatives today are the other undivided pools: family partnerships and LLCs, family firms with controlling share classes, and private foundations. Each lets many relatives benefit while the capital stays in one piece.</p>
+        <p class="src">Kades (2019), &ldquo;Of Piketty and Perpetuities,&rdquo; <i>Boston College Law Review</i>.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Great fortunes arrange not to be seen<span class="sub">Invisibility, then and now</span></summary>
+      <div class="body">
+        <span class="ev">Documented</span>
+        <p>In 1516 Jakob Fugger agreed a fixed annual tax with the city of Augsburg so his family never had to disclose its wealth.</p>
+        <p>Today many grantor trusts file no separate tax return, and the US Treasury has said it has no data on the wealth held in domestic trusts.</p>
+        <p class="src">H&auml;berlein (2012); 26 CFR 1.671-4; US Treasury General Explanations, FY2025.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <h2 class="group">What families pass on besides money</h2>
+    <details>
+      <summary>Structure alone does not preserve a fortune<span class="sub">Family practice matters</span></summary>
+      <div class="body">
+        <span class="ev">Argued</span>
+        <p>Some families built offices and trusts and stayed together; others built nothing and their fortunes dissipated. Legal structures seem to preserve wealth only when families also hold the meetings, keep the records and fill the roles.</p>
+        <p class="src">Shiffer-Sebba (2025).</p>
+      </div>
+    </details>
+    <details>
+      <summary>Heirs inherit stewardship, or don&rsquo;t<span class="sub">Preparing the children for the money</span></summary>
+      <div class="body">
+        <span class="ev">Documented</span>
+        <p>Wealthy families often describe inheritance as preparing the children for the money, and heirs tend to preserve rather than build. Whether stewardship can be taught deliberately is one of the central questions for ordinary families too.</p>
+        <p class="src">Ethnographies of wealthy families, including Higgins (2022).</p>
+      </div>
+    </details>
+    <details>
+      <summary>Relational wealth is the inheritance that doesn&rsquo;t divide<span class="sub">Jobs, boards, names and standing</span></summary>
+      <div class="body">
+        <span class="ev">Open question</span>
+        <p>Much of what a family passes on is not shared among heirs: the top job in the family firm, the chair of the family foundation, board seats, a name, introductions. These go to one or a few heirs, are not taxed and do not dilute.</p>
+        <p>US dynasty trusts and family offices are only three to five generations old, so the long-run effects are still unfolding. England offers a longer view. Following rare surnames through probate records from 1858 to 2012, wealth persistence across whole families was far stronger than parent-to-child links alone suggest, and rich surnames of the 1850s still held 3.6 times average wealth around 2010.</p>
+        <p class="src">Clark and Cummins (2015), <i>Economic Journal</i>.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Families interact the way bands did<span class="sub">Inheritance between families</span></summary>
+      <div class="body">
+        <span class="ev">Open question</span>
+        <p>Bands never lived alone. They traded, intermarried, formed alliances, split and merged, and a band&rsquo;s standing depended on its ties to other bands. Wealthy families do the same through marriage, co-investment, shared foundation boards and networks of family offices.</p>
+        <p>Inheritance is not only what passes down inside a family but what moves between families, and the brakes may work through these ties.</p>
+        <p class="src">A framing analogy guiding the work on inheritance across societies.</p>
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><a href="./">← Nest Egg Lab</a> · <a href="research.html">Research program</a> · © 2026 Nest Egg Lab</div>
+</footer>
+</body>
+</html>
