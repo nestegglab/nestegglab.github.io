@@ -4,9 +4,11 @@ Open, plain-text tools from Nest Egg Lab for preparing family financial statemen
 
 | File | What it is |
 |---|---|
+| `form-1-where-everything-is.md` | Form 1: where everything is, and who to call |
+| `instructions-form-1.md` | Instructions a person can paste to their own assistant for Form 1 |
 | `form-2-what-we-own-and-owe.md` | Form 2: one person's statement, with the four tags, the related-party schedule and purpose-built accounts |
 | `form-2.schema.json` | The same form as a JSON Schema, for assistants and software that want structured output |
-| `instructions-form-2.md` | Instructions a person can paste to their own assistant |
+| `instructions-form-2.md` | Instructions a person can paste to their own assistant for Form 2 |
 | `test-family-walter/folder/` | Fourteen made-up documents for a made-up family, with gaps, conflicts and one injected instruction planted |
 | `test-family-walter/answer-key.md` | What a correct statement contains, and a 40-point score |
 

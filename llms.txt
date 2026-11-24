@@ -10,15 +10,18 @@ Drafts marked "draft" or "for review" have not been reviewed outside the lab. No
 - [Guiding concepts](https://nestegglab.github.io/concepts.html): 13 concepts, each labelled Measured, Documented, Argued or Open question
 - [Hidden Dynasties](https://nestegglab.github.io/papers/hidden-dynasties.html): working paper modelling how dynasty trusts affect the top wealth share (DOI 10.5281/zenodo.23887180; code at https://github.com/nestegglab/hidden-dynasties)
 
-## Family statements (drafts for review)
+## Family statements and forms (drafts for review)
 
 - [A family office for every nest egg](https://nestegglab.github.io/family-office.html): overview of the open tools and the study around them
 - [Family financial statements: concepts paper](https://nestegglab.github.io/papers/family-financial-statements.html): a family layer on ASC 274, four tags, the related-party schedule, purpose-built accounts (401(k), IRA, 529, Trump Account)
+- [Family Records Framework](https://nestegglab.github.io/papers/family-records-framework.html): plain forms a family keeps in its own folder; Form 1, Where everything is
+- [Family Group AI Communication: proposed requirements](https://nestegglab.github.io/papers/family-group-ai-communication.html): rules for AI that talks privately with several family members, with instructions an assistant can load
 - [Brief 1: Personal financial statements and the family](https://nestegglab.github.io/briefs/personal-financial-statements.html): review of ASC 274 and related approaches
 
 ## Tools for assistants
 
 - [Kit README](https://nestegglab.github.io/kit/README.md): what is in the kit
+- [Form 1: Where everything is](https://nestegglab.github.io/kit/form-1-where-everything-is.md) and [its instructions](https://nestegglab.github.io/kit/instructions-form-1.md)
 - [Form 2: What we own and owe](https://nestegglab.github.io/kit/form-2-what-we-own-and-owe.md): plain-text form with fixed headings
 - [Form 2 JSON Schema](https://nestegglab.github.io/kit/form-2.schema.json): the same form for structured output
 - [Instructions for an AI assistant, Form 2](https://nestegglab.github.io/kit/instructions-form-2.md): paste to any assistant that can read a family's folder
