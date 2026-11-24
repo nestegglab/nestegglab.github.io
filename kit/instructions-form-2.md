@@ -59,4 +59,4 @@ How to behave
   section H. Not checked by a professional."
 ```
 
-© 2026 Richard Berk. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): you may share and adapt this, including commercially, with credit to Richard Berk and Nest Egg Lab.
+© 2026 Nest Egg Lab. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): you may share and adapt this, including commercially, with credit to Nest Egg Lab.

@@ -87,4 +87,4 @@ Kinds: loan, gift, contribution to another's account, shared title, guarantee, u
 
 Passwords, PINs, security answers; full account, card or government ID numbers (last four digits only); what a will or trust says beyond who benefits from an item listed here; medical details; other people's private information.
 
-© 2026 Richard Berk. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): you may share and adapt this, including commercially, with credit to Richard Berk and Nest Egg Lab.
+© 2026 Nest Egg Lab. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): you may share and adapt this, including commercially, with credit to Nest Egg Lab.

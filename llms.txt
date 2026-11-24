@@ -28,4 +28,4 @@ Drafts marked "draft" or "for review" have not been reviewed outside the lab. No
 - [Test family and answer key](https://nestegglab.github.io/kit/test-family-walter/answer-key.md): made-up documents for scoring assistants
 - [Brief 2: Counting every kind of family wealth](https://nestegglab.github.io/briefs/all-kinds-of-wealth.html): money, care and time, and knowledge, ties and purpose as separate accounts
 
-© 2026 Richard Berk. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): you may share and adapt this, including commercially, with credit to Richard Berk and Nest Egg Lab.
+© 2026 Nest Egg Lab. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): you may share and adapt this, including commercially, with credit to Nest Egg Lab.

@@ -14,4 +14,4 @@ Background: [Family financial statements, concepts paper](https://nestegglab.git
 
 Everything in the test folder is fictional. Names, institutions, addresses and numbers are invented.
 
-© 2026 Richard Berk. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): you may share and adapt this, including commercially, with credit to Richard Berk and Nest Egg Lab.
+© 2026 Nest Egg Lab. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): you may share and adapt this, including commercially, with credit to Nest Egg Lab.
