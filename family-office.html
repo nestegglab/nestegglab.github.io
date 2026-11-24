@@ -72,12 +72,16 @@
     .grid { grid-template-columns: 1fr; } header { padding-top: 36px; }
     table.tags td:first-child { white-space: normal; }
   }
+  nav.site { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 14px 0 0; font: 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  nav.site a { color: var(--muted); text-decoration: none; }
+  nav.site a:hover, nav.site a[aria-current] { color: var(--accent); }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <a class="brand" href="./">Nest Egg Lab</a>
+    <nav class="site" aria-label="Site"><a href="research.html">Research</a><a href="concepts.html">Concepts</a><a href="library.html">Library</a><a href="family-office.html" aria-current="page">Family statements</a><a href="kit/README.md">Kit</a></nav>
     <h1>A family office for every nest egg</h1>
     <p class="lede">Open financial statements, records and rules that let a family, and the AI assistants it already uses, keep the practice a family office keeps. Open-source drafts, free for any family, program or company to use.</p>
   </div>
@@ -89,6 +93,7 @@
     <p class="quote">Wealthy families pass on money and a way of looking after it.</p>
     <p>A family office prepares statements of what the family owns and owes, keeps the records in one place, runs the family&rsquo;s meetings and keeps clear rules about who decides what. Families that keep up that practice tend to hold together; structure alone does not seem to be enough.</p>
     <p>The lab&rsquo;s <a href="research.html">nest-egg research</a> asks whether ordinary families can benefit from a starting stake held for the long run. A gift can supply the capital. This framework is the other half: the practice that comes with it, written down so a family can keep it without paying for an office. The lab does not run a gift program or choose who receives one; it publishes these tools for any family or program to use.</p>
+    <p class="meta">Why practice matters as much as capital, and how wealth once came with obligations it no longer carries: <a href="briefs/what-wealth-asks.html">Brief 3, What wealth asks of its owners</a>.</p>
     <p>It is written to be used three ways: by hand, with the AI assistants a family already has in its email, bank, phone and files, or through a service built on it. Everything here works without any particular service.</p>
     <span class="ev">Argued</span>
     <p class="meta">That family practice, not structure alone, preserves a family&rsquo;s wealth is one of the lab&rsquo;s <a href="concepts.html">guiding concepts</a>. Whether this framework helps ordinary families is the open question the lab will test (see below).</p>
@@ -238,7 +243,7 @@ How to behave
 </main>
 
 <footer>
-  <div class="wrap"><a href="./">← Nest Egg Lab</a> · <a href="research.html">Research program</a> · <a href="concepts.html">Guiding concepts</a> · © 2026 Nest Egg Lab · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div>
+  <div class="wrap"><a href="./">Nest Egg Lab</a> · <a href="research.html">Research</a> · <a href="concepts.html">Concepts</a> · <a href="library.html">Library</a> · <a href="mailto:richard.berk@nestegglab.org">Contact</a> · © 2026 Nest Egg Lab · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div>
 </footer>
 </body>
 </html>

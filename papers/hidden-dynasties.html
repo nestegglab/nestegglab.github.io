@@ -69,12 +69,16 @@
   pre { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px; font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
   footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
   @media (max-width: 640px) { h1 { font-size: 26px; } }
+  nav.site { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 14px 0 0; font: 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  nav.site a { color: var(--muted); text-decoration: none; }
+  nav.site a:hover, nav.site a[aria-current] { color: var(--accent); }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <a class="brand" href="../">Nest Egg Lab</a>
+    <nav class="site" aria-label="Site"><a href="../research.html">Research</a><a href="../concepts.html">Concepts</a><a href="../library.html">Library</a><a href="../family-office.html">Family statements</a><a href="../kit/README.md">Kit</a></nav>
     <h1>Hidden Dynasties: Dynasty Trusts and the Concentration of Wealth</h1>
     <div class="meta">Richard Berk (<a href="https://orcid.org/0009-0004-5344-4614">ORCID 0009-0004-5344-4614</a>) · Nest Egg Lab · Working paper, November 2026</div>
   </div>
@@ -96,7 +100,7 @@
   </section>
 </main>
 <footer>
-  <div class="wrap"><a href="../">← Nest Egg Lab</a></div>
+  <div class="wrap"><a href=".././">Nest Egg Lab</a> · <a href="../research.html">Research</a> · <a href="../concepts.html">Concepts</a> · <a href="../library.html">Library</a> · <a href="mailto:richard.berk@nestegglab.org">Contact</a> · © 2026 Nest Egg Lab</div>
 </footer>
 </body>
 </html>

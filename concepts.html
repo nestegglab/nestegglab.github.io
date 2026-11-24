@@ -60,12 +60,16 @@
     h1 { font-size: 28px; } .lede { font-size: 18px; } .quote { font-size: 19px; }
     .grid { grid-template-columns: 1fr; } header { padding-top: 36px; }
   }
+  nav.site { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 14px 0 0; font: 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  nav.site a { color: var(--muted); text-decoration: none; }
+  nav.site a:hover, nav.site a[aria-current] { color: var(--accent); }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <a class="brand" href="./">Nest Egg Lab</a>
+    <nav class="site" aria-label="Site"><a href="research.html">Research</a><a href="concepts.html" aria-current="page">Concepts</a><a href="library.html">Library</a><a href="family-office.html">Family statements</a><a href="kit/README.md">Kit</a></nav>
     <h1>Guiding concepts</h1>
     <p class="lede">The ideas that shape the research: how inheritance works, the brakes that have kept it in balance, how families get around them, and what families pass on besides money.</p>
   </div>
@@ -210,7 +214,7 @@
 </main>
 
 <footer>
-  <div class="wrap"><a href="./">← Nest Egg Lab</a> · <a href="research.html">Research program</a> · © 2026 Nest Egg Lab</div>
+  <div class="wrap"><a href="./">Nest Egg Lab</a> · <a href="research.html">Research</a> · <a href="concepts.html">Concepts</a> · <a href="library.html">Library</a> · <a href="mailto:richard.berk@nestegglab.org">Contact</a> · © 2026 Nest Egg Lab</div>
 </footer>
 </body>
 </html>

@@ -71,12 +71,16 @@
     .grid { grid-template-columns: 1fr; }
     header { padding-top: 40px; }
   }
+  nav.site { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 14px 0 0; font: 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  nav.site a { color: var(--muted); text-decoration: none; }
+  nav.site a:hover, nav.site a[aria-current] { color: var(--accent); }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <div class="brand">Nest Egg Lab</div>
+    <nav class="site" aria-label="Site"><a href="research.html">Research</a><a href="concepts.html">Concepts</a><a href="library.html">Library</a><a href="family-office.html">Family statements</a><a href="kit/README.md">Kit</a></nav>
     <h1>Family-office thinking for every family.</h1>
     <p class="lede">Nest Egg Lab is a nonprofit that studies how wealth passes between generations and works to make the long-term planning tools of the very wealthy available to ordinary families.</p>
   </div>
@@ -103,7 +107,7 @@
 
   <section>
     <h2>Research</h2>
-    <p>Read about <a href="research.html">our research program</a>: how families pass things on, the brakes that have kept inheritance in balance, and what we are studying next. The ideas behind it are set out in <a href="concepts.html">guiding concepts</a>.</p>
+    <p>Read about <a href="research.html">our research program</a>: how families pass things on, the brakes that have kept inheritance in balance, and what we are studying next. The ideas behind it are set out in <a href="concepts.html">guiding concepts</a>. Briefs, drafts for review and open tools are listed in the <a href="library.html">library</a>.</p>
     <div class="paper">
       <div class="title"><a href="papers/hidden-dynasties.html" style="color:inherit;text-decoration:none">Hidden Dynasties: Dynasty Trusts and the Concentration of Wealth</a></div>
       <p>A calibrated model of how dynasty trusts affect the share of wealth held by the richest families, and how much of that effect official statistics miss.</p>
@@ -130,7 +134,7 @@
 </main>
 
 <footer>
-  <div class="wrap">© 2026 Nest Egg Lab</div>
+  <div class="wrap"><a href="./">Nest Egg Lab</a> · <a href="research.html">Research</a> · <a href="concepts.html">Concepts</a> · <a href="library.html">Library</a> · <a href="mailto:richard.berk@nestegglab.org">Contact</a> · © 2026 Nest Egg Lab</div>
 </footer>
 </body>
 </html>
