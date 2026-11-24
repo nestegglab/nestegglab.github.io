@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Wealth Asks of Its Owners · Nest Egg Lab Brief</title>
+<meta name="description" content="How the demands wealth placed on its owners changed from forager bands to landed estates to modern portfolios, trusts and retirement accounts; whether those demands were a brake on dynastic wealth; and model terms for a nest-egg trust.">
+<link rel="canonical" href="https://nestegglab.github.io/briefs/what-wealth-asks.html">
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg: #fbfaf7; --surface: #ffffff; --ink: #1d2422; --muted: #5b6662;
+    --line: #e4e1d9; --accent: #2f6b55; --accent-soft: #e6f0eb; --max: 760px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141816; --surface: #1b201e; --ink: #e8ece9; --muted: #a3ada8;
+      --line: #2c3431; --accent: #7fc0a4; --accent-soft: #1f2d27;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 16px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  header { padding: 48px 0 30px; border-bottom: 1px solid var(--line); }
+  .brand { font: 600 15px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+  .kicker { font: 600 13px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--muted); margin: 22px 0 0; }
+  h1 { font-size: 36px; line-height: 1.18; margin: 10px 0 14px; font-weight: 600; }
+  .lede { font-size: 20px; color: var(--muted); margin: 0 0 14px; }
+  .meta { color: var(--muted); font-size: 15px; }
+  section { padding: 34px 0; border-bottom: 1px solid var(--line); }
+  h2 { font: 600 13px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+  h3 { font-size: 20px; margin: 22px 0 8px; font-weight: 600; }
+  h3:first-of-type { margin-top: 0; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  .keys { background: var(--accent-soft); border-radius: 10px; padding: 20px 22px; }
+  .keys ol { margin: 0; padding-left: 22px; }
+  .keys li { margin-bottom: 10px; }
+  .keys li:last-child { margin-bottom: 0; }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 8px 16px; font: 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin-top: 18px; }
+  nav.toc a { text-decoration: none; }
+  .tbl { overflow-x: auto; margin: 4px 0 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--line); }
+  th { font: 600 12px/1.3 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+  td:first-child { font-weight: 600; }
+  ul.brakes { list-style: none; padding: 0; margin: 0 0 14px; }
+  ul.brakes li { padding: 10px 14px 10px 16px; border-left: 3px solid var(--accent); margin-bottom: 10px; background: var(--surface); border-radius: 0 6px 6px 0; }
+  ul.brakes strong { display: block; font-size: 17px; }
+  ul.brakes span { color: var(--muted); font-size: 15px; }
+  .timeline { list-style: none; padding: 0; margin: 0 0 14px; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 14px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -6px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+  .timeline b { font: 600 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; display: block; color: var(--accent); }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin: 0 0 12px; }
+  details > summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 20px; font-size: 19px; font-weight: 600; position: relative; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font: 400 24px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--accent); }
+  details[open] > summary::after { content: "\2212"; }
+  details > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 10px; }
+  details .sub { display: block; font-size: 15px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  details .body { padding: 0 20px 18px; }
+  .ev { display: inline-block; font: 600 11px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; margin: 2px 0 10px; }
+  .src { color: var(--muted); font-size: 14px; }
+  ol.refs { padding-left: 22px; font-size: 15px; }
+  ol.refs li { margin-bottom: 8px; }
+  .disclose { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; font-size: 15px; }
+  .disclose p:last-child { margin-bottom: 0; }
+  section ol { padding-left: 22px; margin: 0 0 14px; }
+  section ol li { margin-bottom: 8px; }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 640px) {
+    h1 { font-size: 28px; } .lede { font-size: 18px; } header { padding-top: 36px; }
+    table { font-size: 14px; }
+  }
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="../">Nest Egg Lab</a>
+    <p class="kicker">Brief 3 · Draft for review</p>
+    <h1>What wealth asks of its owners</h1>
+    <p class="lede">For most of history, wealth came with demands: work, obligations to other people, and ties to a place. Modern instruments are designed to ask almost nothing. This brief asks what that changes, whether the old demands acted as a brake on dynastic wealth, and how light obligations might be put back by choice.</p>
+    <p class="meta">Richard Berk · Nest Egg Lab · November 2026 · Follows <a href="all-kinds-of-wealth.html">Brief 2</a></p>
+    <nav class="toc" aria-label="Sections">
+      <a href="#key-points">Key points</a><a href="#moments">Three moments</a><a href="#today">Wealth that asks nothing</a><a href="#brake">A seventh brake?</a><a href="#cautions">Cautions</a><a href="#back">Putting obligations back</a><a href="#trust">Model trust terms</a><a href="#test">How to test it</a><a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="key-points">
+    <h2>Key points</h2>
+    <div class="keys">
+      <ol>
+        <li><strong>Wealth used to make demands.</strong> Among foragers, having more meant being asked to share. A landed estate needed running, tenants, marriages and an heir who lived there. Owning tied a person to work, to other people and to a place.</li>
+        <li><strong>Modern wealth asks almost nothing of its owner.</strong> A diversified portfolio is managed by professionals, passes by a beneficiary form, and belongs to no place. The work, the ties and the place have been designed out.</li>
+        <li><strong>The demands may have been a brake.</strong> Sharing, supporting dependants and running an estate wore fortunes down and tied them to people. The lab proposes this as a seventh brake on dynastic wealth, to be tested.</li>
+        <li><strong>The old demands were not all good.</strong> Many were imposed by elders, husbands or lords. The question is which obligations are worth keeping and who chooses them, not a return to the past.</li>
+        <li><strong>Light obligations can be chosen.</strong> The lab&rsquo;s open tools already ask a little: say what money is for, record what passes between family members, review it once a year. Where a trust is used, model terms can write such practices down, with a set end date as a deliberate brake.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="moments">
+    <h2>1. Three moments</h2>
+    <p>The lab&rsquo;s research follows inheritance through three moments: forager bands, landed estates, and the family offices and trusts of today. Asking what wealth required of its owner in each gives a different view of the same history.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th></th><th>Forager bands</th><th>Landed estates</th><th>Modern instruments</th></tr></thead>
+        <tbody>
+          <tr><td>What wealth was</td><td>Food, tools, skills and, above all, ties to other people</td><td>Land, a house, a name, dependants</td><td>Diversified portfolios, trusts, retirement accounts</td></tr>
+          <tr><td>Work it asked</td><td>Hunting, gathering and sharing out</td><td>Running the estate; managing tenants</td><td>Almost none from the owner; professionals do it</td></tr>
+          <tr><td>Ties it asked</td><td>Others could demand a share, and refusal had a cost</td><td>Heirs, marriages, retainers, duties to tenants and the parish</td><td>A beneficiary form, a trustee, an adviser</td></tr>
+          <tr><td>Place it asked</td><td>The band&rsquo;s range</td><td>The estate itself</td><td>None</td></tr>
+          <tr><td>How it wore down</td><td>Shared away on demand</td><td>Divided among heirs, spent on obligations, or lost when a line died out</td><td>Payouts and taxes, where they apply</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Bands.</strong> Anthropologists once described forager sharing as generosity. Peterson showed that much of it is <em>demand sharing</em>: people ask, and those who have are expected to give. Demand sharing is a way of testing and confirming social ties in egalitarian societies. Having more created claims on you.</p>
+    <p><strong>People as wealth.</strong> In much of African history, wealth was counted in followers, dependants and kin, a pattern historians call wealth in people. Guyer and Belinga refined this: people were valued as holders of particular knowledge as well as numbers of dependants. Wealth of this kind cannot be held without the relationships it consists of.</p>
+    <p><strong>Estates.</strong> The lab&rsquo;s <a href="../concepts.html">guiding concepts</a> describe the devices that kept estates whole, from primogeniture and entail to family settlements. Those devices also bound the heir: to the land, to the marriages that protected it, and to the dependants who lived on it.</p>
+    <p>Polanyi described the modern shift in general terms: land, labour and money, once bound up with social relations and community rules, came to be treated as commodities. Wealth held as financial assets is the furthest point of that movement.</p>
+    <span class="ev">Documented for bands and people as wealth; argued as a pattern</span>
+  </section>
+
+  <section id="today">
+    <h2>2. Wealth that asks nothing</h2>
+    <p>Three examples, at three scales:</p>
+    <ul class="brakes">
+      <li><strong>A family office with diversified investments</strong><span>The work of owning has moved to professionals. Harrington&rsquo;s study of wealth managers, based on 65 interviews in 18 countries, shows a profession that uses trusts, offshore structures and shell companies to shield fortunes from tax and from other legal obligations. The owner&rsquo;s remaining task is to supervise the people who do the work.</span></li>
+      <li><strong>A dynasty trust with one beneficiary</strong><span>The beneficiary need do nothing to receive. The trust deed decides, the trustee administers, and the family&rsquo;s ties to each other are optional. Marcus&rsquo;s anthropological study of American dynastic families, <i>Lives in Trust</i>, examines families whose lives are organised around such arrangements.</span></li>
+      <li><strong>A retired couple&rsquo;s IRA, far from family</strong><span>Ordinary wealth has followed the same path. A beneficiary form decides who inherits, overriding the will. The money and the family no longer need to be in the same place, and care and money often travel separately.</span></li>
+    </ul>
+    <p>In each case something is gained. Owners are freed from work they may not want or be good at, and independence from family obligation is, for many people, the point. The question is what is lost alongside it.</p>
+    <span class="ev">Documented for the examples; argued as a pattern</span>
+  </section>
+
+  <section id="brake">
+    <h2>3. A seventh brake?</h2>
+    <p>The lab&rsquo;s research identifies six brakes that historically kept inherited wealth in check: payouts to heirs, tax at each generation, trusts that end, taxes and costs, division among heirs, and lines dying out. The demands of wealth may be a seventh, and the oldest: sharing, supporting dependants and running an estate all wore fortunes down, and all tied them to people.</p>
+    <p>If that is right, modern instruments remove two things at once. They remove a brake on accumulation, and they separate money from the relationships and practices the lab&rsquo;s concepts suggest hold families together.</p>
+    <p><strong>Hypotheses, to be tested:</strong></p>
+    <ol>
+      <li>Wealth that asks less of its owner lasts longer as money.</li>
+      <li>Wealth that asks less of its owner does less to hold a family together.</li>
+      <li>Families that keep chosen practices around their money (meeting, reviewing, teaching) keep more relational wealth, whatever the size of the money.</li>
+    </ol>
+    <span class="ev">Hypothesis</span>
+  </section>
+
+  <section id="cautions">
+    <h2>4. Cautions</h2>
+    <ul class="brakes">
+      <li><strong>Obligations were often imposed</strong><span>The old demands came with control. Primogeniture favoured one son; estates bound daughters through marriage; historical household accounts were sometimes used to restrain women&rsquo;s spending. The lab&rsquo;s rule against romanticising foragers applies to estates too.</span></li>
+      <li><strong>Distance can be freedom</strong><span>A retired couple living far from their children may be choosing independence, not suffering a loss. The framework should record what a family chooses, not judge it.</span></li>
+      <li><strong>Conditions written into trusts have a poor record</strong><span>Trusts that reward or punish behaviour, often called incentive trusts, are criticised as inflexible and as control by the dead: their authors cannot foresee every circumstance, and the terms can become a burden. Any obligation the lab proposes should be light, chosen and revisable.</span></li>
+    </ul>
+  </section>
+
+  <section id="back">
+    <h2>5. Putting light obligations back</h2>
+    <p>The lab&rsquo;s open tools already ask a little of their users, without legal force. Made explicit, they become a short list of chosen obligations that any family can take on, with or without a trust.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Obligation</th><th>Practice</th><th>Where in the lab&rsquo;s tools</th></tr></thead>
+        <tbody>
+          <tr><td>Say what money is for</td><td>Each owner writes a purpose for each significant asset</td><td>The Purpose tag on <a href="../kit/form-2-what-we-own-and-owe.md">Form 2</a></td></tr>
+          <tr><td>Account for what passes between people</td><td>Loans, gifts, care and promises listed once and agreed by both sides</td><td>The related-party schedule in the <a href="../papers/family-financial-statements.html">concepts paper</a></td></tr>
+          <tr><td>Count the work</td><td>Hours of care recorded beside the money</td><td>The care and time account in <a href="all-kinds-of-wealth.html">Brief 2</a></td></tr>
+          <tr><td>Meet</td><td>The family reviews the statement once a year</td><td>Meeting records under the <a href="../papers/family-group-ai-communication.html">proposed requirements</a></td></tr>
+          <tr><td>Teach</td><td>Each nest egg has someone, other than its controller, who understands it</td><td>The third account in <a href="all-kinds-of-wealth.html">Brief 2</a></td></tr>
+          <tr><td>Know where everything is</td><td>One shared record of documents and contacts</td><td><a href="../papers/family-records-framework.html">Form 1</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <span class="ev">Argued</span>
+  </section>
+
+  <section id="trust">
+    <h2>6. Model terms for a nest-egg trust</h2>
+    <p>Where a donor or a family uses a trust, its terms are the place to write such obligations down. Dynasty trusts use that tool to remove brakes. A nest-egg trust could use it to put light ones back. The terms below are a starting point for lawyers to adapt, not a legal document, and they are deliberately independent of any service provider.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Term</th><th>Model approach</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Beneficiary</td><td>One person per trust, or one separate share per person under a common agreement</td><td>Keeps each nest egg distinct; separate single-beneficiary shares can also matter for generation-skipping tax when beneficiaries are much younger than the donor</td></tr>
+          <tr><td>How gifts enter</td><td>For adults, a short, notified right to withdraw each gift; for minors, a trust that the child can take at 21, continuing if they leave it in</td><td>The established routes for gifts in trust to count toward the annual gift tax exclusion</td></tr>
+          <tr><td>Purpose</td><td>Stated purposes, such as education, a first home, starting a business, retirement, or care for family</td><td>Writes the Purpose tag into the deed</td></tr>
+          <tr><td>Investment</td><td>Low-cost, broadly diversified index funds</td><td>Mirrors the rule Congress wrote for Trump Accounts; keeps the trustee&rsquo;s task simple</td></tr>
+          <tr><td>End date</td><td>The trust ends and pays out by a set age, such as 30 or 35</td><td>A deliberate brake: a nest egg, not a dynasty</td></tr>
+          <tr><td>Distributions</td><td>For the stated purposes, at the trustee&rsquo;s discretion; no conditions on marriage, religion, weight or similar</td><td>Avoids the worst of incentive trusts</td></tr>
+          <tr><td>Practices</td><td>An annual statement to the beneficiary in the lab&rsquo;s Form 2 format, and an annual conversation with the trustee; encouraged, not enforced</td><td>Light obligations, chosen rather than imposed</td></tr>
+          <tr><td>Trustee</td><td>Independent of the donor&rsquo;s and any provider&rsquo;s commercial interests</td><td>No side, as in the lab&rsquo;s proposed requirements</td></tr>
+          <tr><td>Exit</td><td>The withdrawal window stays real; a beneficiary who takes the money out is not penalised</td><td>Respects the owner; how many stay in is itself worth studying</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Trusts for many small gifts carry real costs: a trustee, annual notices and tax filings for each beneficiary. A common agreement with pooled administration may be the only way such trusts make sense at nest-egg scale. Gift, generation-skipping and income tax treatment all need a lawyer&rsquo;s review for any real use. None of this is legal or tax advice.</p>
+    <span class="ev">Open question</span>
+  </section>
+
+  <section id="test">
+    <h2>7. How to test it</h2>
+    <p>As in the lab&rsquo;s other work, predictions are recorded before results are run, and misses are reported.</p>
+    <ul class="brakes">
+      <li><strong>Across history</strong><span>Compare how long fortunes lasted, and how often families stayed connected, where wealth carried heavy obligations and where it carried few. The lab&rsquo;s anthropology line and trust-sector data are the starting points.</span></li>
+      <li><strong>Among families today</strong><span>Compare families who take on the light practices above with families who do not: whether they meet, whether care and money are discussed together, whether the decision owner recognises decisions as theirs.</span></li>
+      <li><strong>Among nest eggs</strong><span>Where gifts are made in trust with a withdrawal window, record how many recipients leave the money in, and whether the practices are kept.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="disclose">
+      <p><strong>About this brief.</strong> Written by Richard Berk, who founded Nest Egg Lab and also founded Later Plans LLC, a company building a service that helps families talk through later-life decisions. The brief belongs to Nest Egg Lab, which recommends no service. Claude, an AI model made by Anthropic, helped research and draft it; the author is responsible for its content. Not legal, tax or financial advice.</p>
+      <p><strong>Cite as:</strong> Berk, R. (2026). <i>What wealth asks of its owners</i>. Nest Egg Lab Brief 3 (draft).</p>
+      <p>© 2026 Nest Egg Lab. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: you may share and adapt this work, including commercially, with credit to Nest Egg Lab.</p>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <ol class="refs">
+      <li>Peterson, N. (1993). <a href="https://doi.org/10.1525/aa.1993.95.4.02a00050">Demand sharing: reciprocity and the pressure for generosity among foragers</a>. <i>American Anthropologist</i> 95(4), 860&ndash;874; Altman, J., <a href="https://typeset.io/pdf/a-genealogy-of-demand-sharing-from-pure-anthropology-to-4czd0ihd1p.pdf">A genealogy of &ldquo;demand sharing&rdquo;</a>.</li>
+      <li>Guyer, J. I. and Belinga, S. M. Eno (1995). <a href="https://www.african.cam.ac.uk/sites/default/files/guyer2.pdf">Wealth in people as wealth in knowledge: accumulation and composition in Equatorial Africa</a>. <i>Journal of African History</i> 36(1), 91&ndash;120; Guyer (1995), <a href="https://www.african.cam.ac.uk/sites/default/files/guyer.pdf">Wealth in people, wealth in things: introduction</a>.</li>
+      <li>Polanyi, K. (1944). <i>The Great Transformation</i>. Farrar &amp; Rinehart; on the &ldquo;fictitious commodities&rdquo; of land, labour and money, see <a href="https://link.springer.com/article/10.1007/s11614-019-00338-3">a 2019 review of Polanyi&rsquo;s concepts</a>.</li>
+      <li>Harrington, B. (2016). <a href="https://www.degruyterbrill.com/document/doi/10.4159/9780674973619/html"><i>Capital without Borders: Wealth Managers and the One Percent</i></a>. Harvard University Press; <a href="https://www.imf.org/external/pubs/ft/fandd/2016/09/book3.htm">review in IMF Finance &amp; Development</a>.</li>
+      <li>Marcus, G. E. with Hall, P. D. (1992). <i>Lives in Trust: The Fortunes of Dynastic Families in Late Twentieth-Century America</i>.</li>
+      <li>Carnegie, G. and Walker, S. (2007). <a href="https://ideas.repec.org/a/eme/aaajpp/v20y2007i1p41-73.html">Household accounting in Australia</a>. <i>AAAJ</i> 20(1).</li>
+      <li>On incentive trusts: <a href="https://www.wealthmanagement.com/estate-planning/the-dangerous-allure-of-incentive-trusts">The dangerous allure of incentive trusts</a>, WealthManagement.com; <a href="https://ww3.lawschool.cornell.edu/research/JLPP/upload/Rodgers-note-final.pdf">Rodgers, note on incentive trusts</a>, <i>Cornell Journal of Law and Public Policy</i>.</li>
+      <li>On gifts in trust and the annual exclusion: <a href="https://www.thetaxadviser.com/issues/2014/nov/case-study-nov2014/">The Tax Adviser (2014)</a> on withdrawal rights; <a href="https://policyrisk.com/wiki/section-2503c-minor-trust">section 2503(c) minor&rsquo;s trusts</a>; <a href="https://www.sgrlaw.com/newsroom/publications/mind-the-gst-trap-why-annual-exclusion-gifts-to-trusts-arent-always-tax-free">Smith Gambrell &amp; Russell on the GST trap</a>; <a href="https://uscode.house.gov/us/usc/119-118/t26/s2651/">26 U.S.C. &sect; 2651</a>.</li>
+      <li>Nest Egg Lab. <a href="../concepts.html">Guiding concepts</a>; <a href="../research.html">Research program</a>; <a href="all-kinds-of-wealth.html">Brief 2</a>.</li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><a href="../">← Nest Egg Lab</a> · <a href="../family-office.html">A family office for every nest egg</a> · <a href="all-kinds-of-wealth.html">Brief 2</a> · © 2026 Nest Egg Lab · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div>
+</footer>
+</body>
+</html>
