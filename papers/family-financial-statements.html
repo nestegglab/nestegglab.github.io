@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Family Financial Statements: Concepts Paper · Nest Egg Lab</title>
+<meta name="description" content="A family layer on the US standard for personal financial statements: four tags on every item, a related-party schedule, purpose-built accounts such as 401(k)s, 529s and Trump Accounts, and rules for combining statements by agreement. Draft 0.1 for review.">
+<link rel="canonical" href="https://nestegglab.github.io/papers/family-financial-statements.html">
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg: #fbfaf7; --surface: #ffffff; --ink: #1d2422; --muted: #5b6662;
+    --line: #e4e1d9; --accent: #2f6b55; --accent-soft: #e6f0eb; --max: 760px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141816; --surface: #1b201e; --ink: #e8ece9; --muted: #a3ada8;
+      --line: #2c3431; --accent: #7fc0a4; --accent-soft: #1f2d27;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 16px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  header { padding: 48px 0 30px; border-bottom: 1px solid var(--line); }
+  .brand { font: 600 15px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+  .kicker { font: 600 13px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--muted); margin: 22px 0 0; }
+  h1 { font-size: 36px; line-height: 1.18; margin: 10px 0 14px; font-weight: 600; }
+  .lede { font-size: 20px; color: var(--muted); margin: 0 0 14px; }
+  .meta { color: var(--muted); font-size: 15px; }
+  section { padding: 34px 0; border-bottom: 1px solid var(--line); }
+  h2 { font: 600 13px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+  h3 { font-size: 20px; margin: 22px 0 8px; font-weight: 600; }
+  h3:first-of-type { margin-top: 0; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  .keys { background: var(--accent-soft); border-radius: 10px; padding: 20px 22px; }
+  .keys ol { margin: 0; padding-left: 22px; }
+  .keys li { margin-bottom: 10px; }
+  .keys li:last-child { margin-bottom: 0; }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 8px 16px; font: 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin-top: 18px; }
+  nav.toc a { text-decoration: none; }
+  .tbl { overflow-x: auto; margin: 4px 0 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--line); }
+  th { font: 600 12px/1.3 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+  td:first-child { font-weight: 600; }
+  ul.brakes { list-style: none; padding: 0; margin: 0 0 14px; }
+  ul.brakes li { padding: 10px 14px 10px 16px; border-left: 3px solid var(--accent); margin-bottom: 10px; background: var(--surface); border-radius: 0 6px 6px 0; }
+  ul.brakes strong { display: block; font-size: 17px; }
+  ul.brakes span { color: var(--muted); font-size: 15px; }
+  .timeline { list-style: none; padding: 0; margin: 0 0 14px; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 14px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -6px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+  .timeline b { font: 600 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; display: block; color: var(--accent); }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin: 0 0 12px; }
+  details > summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 20px; font-size: 19px; font-weight: 600; position: relative; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font: 400 24px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--accent); }
+  details[open] > summary::after { content: "\2212"; }
+  details > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 10px; }
+  details .sub { display: block; font-size: 15px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  details .body { padding: 0 20px 18px; }
+  .ev { display: inline-block; font: 600 11px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; margin: 2px 0 10px; }
+  .src { color: var(--muted); font-size: 14px; }
+  ol.refs { padding-left: 22px; font-size: 15px; }
+  ol.refs li { margin-bottom: 8px; }
+  .disclose { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; font-size: 15px; }
+  .disclose p:last-child { margin-bottom: 0; }
+  section h2 { font: 600 24px/1.25 Georgia, "Iowan Old Style", "Times New Roman", serif; letter-spacing: 0; text-transform: none; color: var(--ink); margin: 0 0 16px; }
+  section ul, section ol { padding-left: 22px; margin: 0 0 14px; }
+  section li { margin-bottom: 8px; }
+  ul.check { list-style: none; padding-left: 0; }
+  ul.check li { padding-left: 22px; position: relative; }
+  ul.check li::before { content: "?"; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
+  code { font-size: 15px; }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 640px) {
+    h1 { font-size: 28px; } .lede { font-size: 18px; } header { padding-top: 36px; }
+    table { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="../">Nest Egg Lab</a>
+    <p class="kicker">Concepts paper · Draft 0.1 for review</p>
+    <h1>Family financial statements</h1>
+    <p class="lede">A family layer on the US standard for personal financial statements: each person&rsquo;s statement first, four tags on every item, a schedule of everything that passes between family members, and rules for combining statements by agreement rather than by adding them up.</p>
+    <p class="meta">Richard Berk (<a href="https://orcid.org/0009-0004-5344-4614">ORCID 0009-0004-5344-4614</a>) · Nest Egg Lab · November 2026 · Companion to <a href="../briefs/personal-financial-statements.html">Brief 1</a></p>
+    <nav class="toc" aria-label="Sections">
+      <a href="#summary">Summary</a><a href="#the-measured-share-and-four-tags">Tags</a><a href="#measurement">Measurement</a><a href="#purpose-built-accounts-where-consolidati">Purpose-built accounts</a><a href="#combining-statements-into-a-family-view">Combining</a><a href="#the-related-party-schedule">Related parties</a><a href="#worked-example-walter-nina-and-theo">Worked example</a><a href="#open-questions">Open questions</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<section id="summary">
+<h2>Summary</h2>
+<p>This paper proposes a family layer on top of the US standard for personal financial statements (ASC 274). Each person&#x27;s statement follows ASC 274&#x27;s measurement rules unchanged. The family layer adds four tags to every item (title, later benefit, decision, purpose), a related-party schedule for everything that passes between family members, and rules for combining statements by agreement rather than by adding them up.</p>
+<p>Consolidation starts in two places where the facts are already written down: purpose-built accounts such as 401(k)s, IRAs, 529s and the new Trump Accounts, whose governing law already separates owner, beneficiary, controller and purpose; and the related-party schedule, which is where one person&#x27;s statement meets another&#x27;s. A nest egg is one more purpose-built account.</p>
+<p>It is written so that an AI assistant, working from a family&#x27;s own documents, can follow it: prepare each statement, show where every figure came from, list what it could not find, and combine only what each person agrees to share.</p>
+<p><strong>Status:</strong> draft 0.1, Nest Egg Lab, for review. Not tested, not reviewed outside, not accounting advice. Examples use a made-up family.</p>
+</section>
+<section id="what-family-statements-are-for">
+<h2>What family statements are for</h2>
+<p>The statements exist to help a family decide things together while each person keeps control of their own affairs. They are not prepared for a lender or a court, and that changes what they must show.</p>
+<div class="tbl"><table><tr><th>Reader</th><th>Decision the statements serve</th><th>What they most need to see</th></tr><tr><td>The decision owner (often a parent)</td><td>Where to live, how to pay for care, what to leave and to whom</td><td>Their own position, what is earmarked, and what others are counting on</td></tr><tr><td>Adult children</td><td>How to help without taking over; what they may need to step in for</td><td>What exists and where, who decides each thing, and what is not theirs</td></tr><tr><td>The family together</td><td>A meeting about care, a home, a gift or an estate</td><td>Only what each person has agreed to share, side by side</td></tr><tr><td>A professional the family hires</td><td>Advice on tax, law or investments</td><td>Sources, dates and gaps, so they can check the figures</td></tr><tr><td>A nest-egg recipient</td><td>How to hold and grow a starting stake</td><td>Their own statement, and where the gift sits on it</td></tr></table></div>
+<p>Three uses follow from this. A statement must say who each figure belongs to before it says how much. It must make room for things that matter but are not owned, such as promises and care. And it must be safe to share in part.</p>
+</section>
+<section id="what-the-existing-standard-does-and-the-">
+<h2>What the existing standard does, and the gap</h2>
+<p>US accounting already has a standard for personal financial statements, ASC 274. This paper builds on it rather than replacing it.</p>
+<p>What ASC 274 provides, as summarised in secondary sources (the codification itself still needs reading):</p>
+<ul><li><p><strong>Who:</strong> statements for one person, a couple jointly, or &quot;collectively for a family&quot;.</p></li><li><p><strong>Value:</strong> assets and debts at estimated current value, the price a willing, informed buyer and seller would agree.</p></li><li><p><strong>Tax:</strong> net worth is shown after the income tax that would be owed if assets were sold at those values.</p></li><li><p><strong>Statements:</strong> a statement of financial condition (required) and a statement of changes in net worth (optional), on the accrual basis, ordered by liquidity.</p></li></ul>
+<p>Where it stops for this purpose:</p>
+<div class="tbl"><table><tr><th>ASC 274</th><th>This paper</th></tr><tr><td>A family statement is one pool with one net worth</td><td>Each person&#x27;s statement first; a family view sets them side by side</td></tr><tr><td>Records each person&#x27;s beneficial interest today (joint assets split under state law)</td><td>Keeps that measured share, and adds who holds title, who will benefit later, who decides and what it is for</td></tr><tr><td>Prepared for a user such as a lender</td><td>Prepared for family members who share some figures and not others</td></tr><tr><td>Assumes an accountant prepares it</td><td>Written so an assistant can prepare it, showing sources and gaps</td></tr><tr><td>No place for promises or unpaid care</td><td>Promises and care are recorded, though not as assets</td></tr></table></div>
+<p>The gap matters for the lab&#x27;s research too. The space between owning, benefiting and deciding is what dynasty trusts use to keep a fortune undivided. Ordinary families rarely see that space in their own affairs.</p>
+<p>The full review of ASC 274 and related approaches is in <a href="../briefs/personal-financial-statements.html">Nest Egg Lab Brief 1</a> (draft).</p>
+</section>
+<section id="the-reporting-unit">
+<h2>The reporting unit</h2>
+<p>The unit is the person. A family is a set of persons, each with their own statement, plus the arrangements that sit between them.</p>
+<ol><li><p><strong>Person.</strong> Every adult in scope has a statement, prepared from their own documents and controlled by them. A minor&#x27;s statement is held by their guardian.</p></li><li><p><strong>Couple.</strong> A married couple may choose a joint statement, as ASC 274 allows. Joint assets stay tagged to both, so the statement can be split again if needed.</p></li><li><p><strong>Shared arrangements.</strong> A trust, a family business, a co-owned property or a family loan is described once, in its own short schedule, and each person&#x27;s statement shows only their tagged share or interest.</p></li><li><p><strong>Family view.</strong> A presentation built from the persons&#x27; statements, never a separate set of books.</p></li></ol>
+<p>Who counts as &quot;the family&quot; is set by the people taking part, not by the framework. Spouses, step-children, partners and in-laws are in scope only if they join.</p>
+</section>
+<section id="the-measured-share-and-four-tags">
+<h2>The measured share and four tags</h2>
+<p>Every item on a person&#x27;s statement has a <strong>measured share</strong> and four <strong>tags</strong>. The measured share is what ASC 274 already requires: the person&#x27;s interest as a beneficial owner, determined under state property law, at estimated current value. The tags record what ASC 274 does not.</p>
+<div class="tbl"><table><tr><th>Tag</th><th>Question</th><th>Typical evidence</th><th>Allowed values</th></tr><tr><td>Title</td><td>Whose name is it in?</td><td>Statement, deed, account agreement</td><td>Persons, a trust, an entity</td></tr><tr><td>Later benefit</td><td>Who receives it when the owner dies or the account ends?</td><td>Beneficiary designation, will, trust terms, plan rules, account law</td><td>Persons with shares where known, each marked <em>by form</em>, <em>by will</em>, <em>by law</em> or <em>by trust</em></td></tr><tr><td>Decision</td><td>Who can decide what happens to it, now and if the owner cannot?</td><td>Account authority, power of attorney, trustee, custodian, plan rules</td><td>Persons or roles, each marked <em>now</em> or <em>if incapacity</em></td></tr><tr><td>Purpose</td><td>What is it meant for?</td><td>The owner&#x27;s words; a trust&#x27;s purpose; the account&#x27;s legal purpose</td><td>Owner&#x27;s text, <em>by law</em> (for example education or health), or <em>not stated</em></td></tr></table></div>
+<p>Rules for the tags:</p>
+<ul><li><p><strong>The share is measured; the tags are described.</strong> Only the measured share carries an amount. Tags never change it.</p></li><li><p><strong>Evidence first.</strong> Tags come from documents where documents exist. Where they don&#x27;t, the tag says <em>as told by</em> and names the person.</p></li><li><p><strong>Law counts as evidence.</strong> For purpose-built accounts, the governing law often fixes a tag: a 529&#x27;s purpose is education, a Trump Account cannot be withdrawn before the child&#x27;s 18th year. The tag cites the rule.</p></li><li><p><strong>Purpose is the owner&#x27;s.</strong> Apart from purposes set by law or a trust, only the owner sets Purpose. An assistant never infers it. Families earmark money for people and purposes, and this tag records that.</p></li><li><p><strong>Blank is allowed.</strong> An unknown tag is left blank and listed as a gap, never guessed.</p></li><li><p><strong>Conflicts are shown.</strong> If a will and a beneficiary form disagree, both are recorded and the item is marked <em>conflict</em>. The framework does not decide which wins.</p></li></ul>
+</section>
+<section id="measurement">
+<h2>Measurement</h2>
+<p>Figures follow ASC 274 without change, with two of its open questions answered and three additions for families.</p>
+<p><strong>Adopted from ASC 274 as it stands</strong></p>
+<ul><li><p><strong>Estimated current value</strong> for assets and estimated current amounts for debts, with the method disclosed.</p></li><li><p><strong>The tax provision:</strong> estimated income tax on the gap between each value and its tax basis, as if sold on the statement date.</p></li><li><p><strong>The future-interest test:</strong> a right to future money counts as an asset only if it is fixed or determinable, not contingent on living to a date or on an event, and needs no future work. Others, such as a lifetime pension, are disclosed, not counted.</p></li></ul>
+<p><strong>Two open questions answered</strong></p>
+<ul><li><p><strong>M-1 As is, not as if.</strong> Estimated current value means what a buyer <em>would</em> pay for the item as it stands today. No values that assume restrictions lifted, land developed or a business sold to an ideal buyer.</p></li><li><p><strong>M-2 &quot;Net worth&quot; only with tax.</strong> A total may be called net worth only if the tax provision is included. Otherwise it is &quot;assets less debts, before tax&quot;.</p></li></ul>
+<p><strong>Three additions for families</strong></p>
+<ul><li><p><strong>M-3 Tax per account where it differs.</strong> Retirement and other purpose-built accounts show the tax that would be due on withdrawal, account by account: a traditional IRA and a Roth IRA of the same balance are not the same amount of money.</p></li><li><p><strong>M-4 Optional actuarial values.</strong> Interests that fail the future-interest test, such as a life interest in a home or an interest in a trust, may show a value from the IRS section 7520 actuarial tables, labelled <em>tax convention, not a market price</em>, and kept out of totals.</p></li><li><p><strong>M-5 Shared at the owner&#x27;s chosen detail.</strong> Each figure is labelled by source (<em>statement</em>, <em>appraisal</em>, <em>public estimate</em>, <em>owner&#x27;s estimate</em>, <em>assistant&#x27;s estimate</em> with working) and date. When shared with the family, the owner may give an amount, a range or a description.</p></li></ul>
+<p>What stays out of figures: expected inheritances, promised gifts and the value of unpaid care. Each is recorded in its own schedule.</p>
+</section>
+<section id="purpose-built-accounts-where-consolidati">
+<h2>Purpose-built accounts: where consolidation begins</h2>
+<p>Tax-advantaged accounts follow one pattern: the law trades a tax benefit for a restriction, and in doing so it writes the tags down. Who owns the account, who receives it later, who controls it and what it is for are fixed by statute, plan rules or a signed form. That makes these accounts the natural first step for a family view. The evidence is on paper, they hold much of a typical family&#x27;s financial wealth, and several of them cross generations.</p>
+<div class="tbl"><table><tr><th>Account</th><th>Title</th><th>Later benefit</th><th>Decision</th><th>Purpose and release</th></tr><tr><td>401(k) and other ERISA plans</td><td>Participant</td><td>Beneficiary form, but a surviving spouse has rights the form cannot remove without the spouse&#x27;s written consent</td><td>Participant, within plan rules</td><td>Retirement; tax due on withdrawal from pre-tax money</td></tr><tr><td>Traditional and Roth IRA</td><td>Owner</td><td>Beneficiary form decides and overrides the will; no ERISA spousal rule (community-property states differ)</td><td>Owner</td><td>Retirement; Roth withdrawals generally tax-free</td></tr><tr><td>529 education plan</td><td>Account owner, often a parent or grandparent</td><td>The named student, changeable by the owner to another family member</td><td>Account owner</td><td>Education; up to $35,000 per beneficiary may roll to the beneficiary&#x27;s Roth IRA if the account is 15+ years old</td></tr><tr><td>Custodial account (UTMA/UGMA)</td><td>The child</td><td>The child</td><td>Custodian until the age set by state law</td><td>Any use for the child&#x27;s benefit</td></tr><tr><td>Trump Account</td><td>The child (a traditional IRA for a minor)</td><td>The child</td><td>Parent or guardian during the growth period</td><td>No withdrawals before the year the child turns 18; index funds costing 0.1% a year or less until then</td></tr><tr><td>Pension or Social Security</td><td>Worker</td><td>Spouse or survivor by plan or law</td><td>Plan or agency</td><td>Income for life; usually fails the future-interest test, so disclosed rather than counted</td></tr></table></div>
+<p><strong>The Trump Account is a nest egg the law has already built.</strong> Created by the July 2025 tax law, it opened for contributions on July 4, 2026. Family and others may add up to $5,000 a year in 2026 and 2027. A parent&#x27;s employer may add up to $2,500 per employee within that cap. Treasury adds a one-time $1,000 for eligible children born 2025 to 2028, and governments and 501(c)(3) organizations can fund equal contributions to whole classes of children (by state or area, or by birth year); neither counts toward the cap. The pilot, charitable and employer amounts create no tax basis, so they are taxed when withdrawn.</p>
+<p>Three lessons follow for how a nest egg is presented:</p>
+<ol><li><p><strong>Record contributions by source.</strong> Who put money in decides how it is taxed later and who has a related-party claim to it. A nest-egg schedule lists each contribution, its source and its tax basis.</p></li><li><p><strong>Show the release date.</strong> A purpose-built account is not available money until its release date. The statement shows the date and what happens then (a Trump Account becomes an ordinary traditional IRA).</p></li><li><p><strong>Show the controller separately from the owner.</strong> A child owns the account; a parent decides. The Decision tag carries this, and it changes on a known date.</p></li></ol>
+<p>Source: federal law and IRS guidance as summarised in the sources below; plan rules vary and should be read for each account.</p>
+</section>
+<section id="combining-statements-into-a-family-view">
+<h2>Combining statements into a family view</h2>
+<p>A business combines statements by control: a parent company controls its subsidiaries, so their accounts are added together. A family has no such control. No one owns the others&#x27; assets or can direct them, so the framework combines by agreement and by tag instead.</p>
+<p>Proposed rules, numbered so they can be cited and tested:</p>
+<ol><li><p><strong>C-1 Side by side by default.</strong> The family view places each person&#x27;s statement in its own column. It shows no family total unless rule C-7 applies.</p></li><li><p><strong>C-2 Only what was shared.</strong> Each person chooses which items, or which level of detail (amount, range or description), enter the family view. Everything else stays on their own statement.</p></li><li><p><strong>C-3 Each item once.</strong> An item with several owners appears once, in a shared row, with each owner&#x27;s share. It is never counted in two columns.</p></li><li><p><strong>C-4 </strong><strong>Related-party balance</strong><strong>s drop out.</strong> Every balance between family members is listed once in the related-party schedule (next section). In the family view each is shown as a matched pair and excluded from any total.</p></li><li><p><strong>C-5 Hopes are not assets.</strong> An expected inheritance never appears on the heir&#x27;s statement. It appears on the owner&#x27;s, through the Benefit tag (<em>later</em>), and the family view can show it from there.</p></li><li><p><strong>C-6 Promises are recorded as promises.</strong> Something said but not documented (&quot;the cabin will go to Theo&quot;) goes in a promises schedule with who said it and when. It is not an asset, a debt or a benefit tag.</p></li><li><p><strong>C-7 A total only by agreement.</strong> A family total may be shown only when every person whose figures it includes agrees, and it is labelled with what it includes and leaves out.</p></li><li><p><strong>C-8 Views, not verdicts.</strong> The same tagged facts can be shown by title (what each person owns), by benefit (who stands to gain) or by decision (who controls what). The framework shows the view asked for and never picks one as &quot;the true&quot; family position.</p></li><li><p><strong>C-9 Sources travel with figures.</strong> Every figure in the family view links back to the person&#x27;s statement and the document it came from.</p></li></ol>
+</section>
+<section id="the-related-party-schedule">
+<h2>The related-party schedule</h2>
+<p>Business accounting already has a model for transactions between parties who are not independent of each other. ASC 850 requires a company to disclose the nature of each related-party relationship, a description of the transactions (including those with no amount attached), the amounts, and what is owed between the parties with its terms of settlement. A family is made almost entirely of related parties, so the framework adapts the same disclosure into one schedule that sits between the personal statements.</p>
+<p>The schedule is where one person&#x27;s statement meets another&#x27;s. It is the first part of a family view, and often the most useful.</p>
+<div class="tbl"><table><tr><th>Kind</th><th>Examples</th><th>What the schedule records</th><th>Why it matters</th></tr><tr><td>Loans</td><td>A parent lends a child a house deposit</td><td>Lender, borrower, date, balance, rate, written note or not</td><td>Below the IRS applicable federal rate, a loan can be partly a gift; small loans between individuals (generally $10,000 or less outstanding) are exempt</td></tr><tr><td>Gifts</td><td>Cash, a car, paying tuition</td><td>Giver, receiver, date, amount, whether reported</td><td>Annual exclusion and lifetime exemption use; fairness between children</td></tr><tr><td>Contributions to another&#x27;s account</td><td>A grandparent funds a 529 or a Trump Account</td><td>Contributor, account, beneficiary, amount, tax basis created</td><td>The contributor gives up the money; the tags on the account decide who controls it</td></tr><tr><td>Shared title</td><td>Joint accounts, co-owned property</td><td>Each owner&#x27;s measured share; who contributed the money</td><td>ASC 274 counts only each owner&#x27;s beneficial interest; contribution history often differs</td></tr><tr><td>Guarantees</td><td>Co-signing a child&#x27;s lease or loan</td><td>Guarantor, debtor, maximum exposure</td><td>A contingent debt on the guarantor&#x27;s statement</td></tr><tr><td>Use of property</td><td>A child living rent-free in a parent&#x27;s house</td><td>Who uses what, since when, any agreement</td><td>A benefit no statement shows otherwise</td></tr><tr><td>Care and time</td><td>A daughter&#x27;s weekly care for a parent</td><td>Hours, since when, any payment or promise</td><td>The largest flow in many families; recorded, not priced</td></tr><tr><td>Promises</td><td>&quot;The cabin will go to Theo&quot;</td><td>Who said it, to whom, when, any writing</td><td>Not a debt or asset; the source of many disputes</td></tr></table></div>
+<p>Rules for the schedule:</p>
+<ul><li><p><strong>R</strong><strong>P</strong><strong>-1 Both sides agree or both are shown.</strong> Each entry is confirmed by both people, or shows each person&#x27;s version.</p></li><li><p><strong>R</strong><strong>P</strong><strong>-2 Nothing priced that the family has not priced.</strong> Care, use of property and promises are recorded without dollar values unless the people involved agree on one.</p></li><li><p><strong>R</strong><strong>P</strong><strong>-3 Terms are disclosed.</strong> Rate, repayment and whether anything is written down, as ASC 850 asks of companies.</p></li><li><p><strong>R</strong><strong>P</strong><strong>-4 Shared only by agreement.</strong> The schedule follows C-2: an entry enters the family view only if the people in it agree.</p></li></ul>
+</section>
+<section id="hard-cases">
+<h2>Hard cases</h2>
+<p>Proposed treatments. Each is a starting point for review, not a settled rule.</p>
+<div class="tbl"><table><tr><th>Case</th><th>Proposed treatment</th><th>Still unsettled</th></tr><tr><td>Joint account (parent and child)</td><td>One shared row; Title both; Benefit and Decision from the account terms and the parent&#x27;s account of why the child was added</td><td>Whether a &quot;convenience&quot; joint owner should show any share at all</td></tr><tr><td>Co-owned property</td><td>One shared row with each owner&#x27;s legal share; Purpose from each owner</td><td>Owners who disagree on Purpose</td></tr><tr><td>Family business</td><td>Its own schedule; each person shows their interest at estimated value; Decision tag shows who runs it</td><td>Valuing a small private firm without an appraisal</td></tr><tr><td>Trust</td><td>Its own schedule; Title the trustee; Benefit the beneficiaries, now and later; held on no one&#x27;s statement as owned unless revocable by them</td><td>Valuing a beneficiary&#x27;s interest in a discretionary trust</td></tr><tr><td>Beneficiary form differs from the will</td><td>Both recorded; item marked <em>conflict</em></td><td>None in the framework; it is a question for a lawyer</td></tr><tr><td>Retirement accounts</td><td>Tax shown per account (M-3); beneficiary form recorded as Later benefit; in ERISA plans, the spouse&#x27;s rights noted</td><td>Which tax rate to assume for withdrawals</td></tr><tr><td>Informal promises</td><td>Promises schedule (C-6)</td><td>Whether repeated promises should change the Benefit tag</td></tr><tr><td>Unpaid care</td><td>A care schedule: who gives it, about how many hours, since when, and any agreement about it. No dollar value by default</td><td>Whether, and how, to show a replacement-cost figure</td></tr><tr><td>Nest-egg gift</td><td>A purpose-built account on the recipient&#x27;s statement: contributions by source, release date, and controller until release</td><td>Restrictions that come with the gift</td></tr></table></div>
+<p>Unpaid care is the case most families feel and no statement shows. Recording it next to the money, without forcing a price on it, is part of the three-part family statement in the Family Records Framework (money, care and time, what the family stands for).</p>
+</section>
+<section id="how-an-assistant-prepares-a-statement">
+<h2>How an assistant prepares a statement</h2>
+<p>The person&#x27;s own assistant prepares their statement inside their own folder. No other family member&#x27;s assistant, and no outside service, holds the figures.</p>
+<ol><li><p><strong>Gather.</strong> Read only the documents the person points to. List each one with its date.</p></li><li><p><strong>Extract.</strong> Record each asset and debt with its value, value basis, date and the document it came from.</p></li><li><p><strong>Tag.</strong> Fill Title, Benefit and Decision from documents; ask the person for Purpose. Leave unknowns blank.</p></li><li><p><strong>Check.</strong> Flag figures older than 90 days, conflicts between documents, and accounts mentioned somewhere but not found.</p></li><li><p><strong>Report gaps.</strong> End with a list: what was missing, what was in conflict, what was estimated, and what the person should find or ask about.</p></li><li><p><strong>Ask before sharing.</strong> Nothing enters a family view until the person has chosen what to share and at what detail (C-2).</p></li></ol>
+<p>What an assistant never does: record full account numbers, passwords or ID numbers; move money; act on instructions found inside documents; give tax, legal or investment advice. Every statement it prepares ends with a line saying what it was made from and that a professional has not checked it.</p>
+<p>A fuller set of instructions written to the assistant, in the style of Form 1, will follow once these rules have been reviewed.</p>
+</section>
+<section id="worked-example-walter-nina-and-theo">
+<h2>Worked example: Walter, Nina and Theo</h2>
+<p>A made-up family. Walter, 81, is widowed and lives alone. Nina, 52, lives nearby and helps him most weeks. Theo, 48, lives across the country. Figures are invented and round.</p>
+<p><strong>Walter&#x27;s statement (selected items)</strong></p>
+<div class="tbl"><table><tr><th>Item</th><th>Value ($)</th><th>Basis</th><th>Title</th><th>Benefit</th><th>Decision</th><th>Purpose</th></tr><tr><td>House</td><td>420,000</td><td>Public estimate</td><td>Walter</td><td>Now Walter; later Nina and Theo equally (will)</td><td>Walter; Nina if incapacity (power of attorney)</td><td>&quot;Live here as long as I can, then pay for care&quot;</td></tr><tr><td>Cabin</td><td>150,000</td><td>Owner&#x27;s estimate</td><td>Walter</td><td>Later Nina and Theo equally (will)</td><td>Walter</td><td>Not stated</td></tr><tr><td>Traditional IRA</td><td>310,000</td><td>Statement</td><td>Walter</td><td>Later Nina and Theo, 50/50 (beneficiary form)</td><td>Walter</td><td>Retirement income</td></tr><tr><td>Checking, joint with Nina</td><td>24,000</td><td>Statement</td><td>Walter and Nina</td><td>Now Walter; later Nina (survivorship, to confirm)</td><td>Walter; Nina can sign</td><td>Bills</td></tr><tr><td>Loan to Theo</td><td>30,000</td><td>Signed note</td><td>Walter</td><td>Walter</td><td>Walter</td><td>Help with a house deposit</td></tr><tr><td>Estimated tax on IRA withdrawals</td><td>(68,200)</td><td>Estimate, 22% assumed</td><td></td><td></td><td></td><td></td></tr></table></div>
+<p><strong>What the rules do with it</strong></p>
+<ul><li><p><strong>C-4:</strong> the $30,000 loan is an asset on Walter&#x27;s statement and a debt on Theo&#x27;s. In the family view the pair is matched and left out of any total.</p></li><li><p><strong>C-6:</strong> Walter has told Theo, more than once, that the cabin will go to him. The will says equal shares. The promise goes in the promises schedule; the Benefit tag stays with the will; the difference is flagged for the family and a lawyer.</p></li><li><p><strong>Benefit view (C-8):</strong> read by benefit, the joint checking account may pass to Nina alone, outside the will. Neither child knew. The statement does not judge it; it puts it where Walter can decide whether that is what he wants.</p></li><li><p><strong>C-2:</strong> Nina shares only a range for her own savings. Theo shares his loan balance and nothing else. Both choices stand.</p></li><li><p><strong>Care schedule:</strong> Nina gives about 12 hours a week, since early 2024. No dollar value is assigned.</p></li></ul>
+<p><strong>The family&#x27;s related-party schedule</strong></p>
+<p>Theo&#x27;s daughter Ava was born in 2026. Her parents opened a Trump Account for her and elected the $1,000 Treasury contribution. Walter wants to help.</p>
+<div class="tbl"><table><tr><th>Entry</th><th>Between</th><th>Amount ($)</th><th>Terms and evidence</th></tr><tr><td>Loan for a house deposit</td><td>Walter to Theo</td><td>30,000</td><td>Signed note; rate to be checked against the applicable federal rate</td></tr><tr><td>Contribution to Ava&#x27;s Trump Account</td><td>Walter to Ava</td><td>2,000</td><td>After-tax; creates basis in Ava&#x27;s account; within the $5,000 annual cap</td></tr><tr><td>Joint checking account</td><td>Walter and Nina</td><td>24,000</td><td>All deposits are Walter&#x27;s; Nina was added to pay bills</td></tr><tr><td>Care</td><td>Nina to Walter</td><td>Not priced</td><td>About 12 hours a week since early 2024 (RP-2)</td></tr><tr><td>Promise</td><td>Walter to Theo</td><td>Not priced</td><td>The cabin, said aloud; the will says equal shares</td></tr></table></div>
+<p><strong>Ava&#x27;s nest egg on her own statement</strong> (held by her parents as controllers until her 18th year): contributions by source, Treasury $1,000 (no basis), Walter $2,000 (basis), parents $500 (basis); release in 2044, when it becomes an ordinary traditional IRA; Decision tag <em>Theo and his partner until 2044, then Ava</em>.</p>
+<p>Read together, the schedule shows what no single statement does: Walter has given or lent Theo&#x27;s household $32,000 and promised him the cabin, while Nina gives hours each week and may receive the joint account. Whether that is fair is the family&#x27;s question. The schedule only makes it visible.</p>
+<p><strong>Gaps the assistant reports:</strong> tax on the house and cabin gains not estimated (purchase prices not found); whether the checking account carries survivorship rights; no long-term care insurance found; cabin value is Walter&#x27;s own estimate.</p>
+<p>The example shows the point of the framework: two of the family&#x27;s likeliest future disputes (the joint account and the cabin) are visible on paper while Walter can still settle them.</p>
+</section>
+<section id="how-the-rules-will-be-tested">
+<h2>How the rules will be tested</h2>
+<p>The rules are tested in three stages, each before the next, with predictions recorded before results are run, as in the lab&#x27;s other work.</p>
+<ol><li><p><strong>Made-up document sets.</strong> Build folders of invented statements, deeds, wills and beneficiary forms for families like Walter&#x27;s, with planted conflicts and gaps. Ask several assistants to prepare statements under these rules. Score them against an answer key prepared by an accountant: figures right, tags right, conflicts caught, gaps listed, nothing invented.</p></li><li><p><strong>Accountant review.</strong> Give the rules and the scored outputs to two or three practising accountants. Ask where the rules conflict with ASC 274 or with practice, and which hard cases they would treat differently.</p></li><li><p><strong>Volunteer families.</strong> Only after stages 1 and 2: a small number of families prepare statements with their own assistants, in their own folders. The lab sees only what each family chooses to report, such as whether they found what they needed and whether the family view helped a conversation.</p></li></ol>
+<p>Example predictions to record in advance: assistants will fill Title correctly far more often than Benefit; joint-account survivorship will be missed most often; families will share ranges more often than amounts.</p>
+</section>
+<section id="open-questions">
+<h2>Open questions</h2>
+<ul class="check"><li><p><strong>Does this conflict with ASC 274?</strong> Read the codification itself, not summaries, and confirm that side-by-side statements and the four tags are compatible with it or say plainly where they depart.</p></li><li><p><strong>Is a family total ever right by default?</strong> Some families will want one number. C-7 requires everyone&#x27;s agreement; is that too strict?</p></li><li><p><strong>Valuing interests in trusts.</strong> How should a beneficiary&#x27;s interest in a discretionary trust be shown, if at all?</p></li><li><p><strong>Unpaid care.</strong> Hours only, or also a replacement-cost figure? A figure makes care comparable to money; it may also make it a bargaining chip.</p></li><li><p><strong>Promises.</strong> When, if ever, should repeated promises change the Benefit tag?</p></li><li><p><strong>Tax assumptions.</strong> Which rate should an assistant assume for retirement-account withdrawals and capital gains when the person&#x27;s own rate is unknown?</p></li><li><p><strong>How often to update.</strong> Annually, and after a death, move, marriage or new account, as for Form 1, or more often?</p></li><li><p><strong>Format for assistants.</strong> A document with fixed headings, a spreadsheet, or a structured file an assistant can read and write exactly?</p></li></ul>
+<p><strong>Added with the purpose-built accounts and related-party schedule</strong></p>
+<ul class="check"><li><p><strong>Which accounts first?</strong> Start with retirement accounts, 529s and Trump Accounts, or with the related-party schedule alone? The schedule may be more useful and needs no valuations.</p></li><li><p><strong>Interest-rate test for family loans.</strong> Should the schedule compare each loan&#x27;s rate with the applicable federal rate automatically, or only note it?</p></li><li><p><strong>Who confirms a related-party entry</strong> when one person has died or can no longer take part?</p></li><li><p><strong>Nest-egg presentation.</strong> Is a separate nest-egg schedule (contributions by source, release date, controller) enough, or should a nest egg have its own form in the Family Records Framework?</p></li><li><p><strong>Trump Account rules are new.</strong> Temporary regulations issued September 30, 2026 expire in 2029; the schedule must track rule changes.</p></li></ul>
+</section>
+<section id="sources-disclosure-and-what-this-is-not">
+<h2>Sources, disclosure and what this is not</h2>
+<p><strong>Sources (secondary; the codification has not yet been read directly)</strong></p>
+<ul><li><p><a href="https://dart.deloitte.com/USDART/home/codification/presentation/asc274">Deloitte DART: ASC 274 Personal Financial Statements</a></p></li><li><p><a href="https://www.oreilly.com/library/view/wiley-gaap-2019/9781119511571/c13.xhtml">Wiley GAAP 2019, ch. 13: ASC 274 definitions</a> (estimated current value; net worth after estimated tax)</p></li><li><p><a href="https://www.oreilly.com/library/view/wiley-gaap-financial/9781118572085/c13.xhtml">Wiley GAAP Financial Statement Disclosures, ch. 13</a> (statements for an individual, a couple, or a family)</p></li><li><p><a href="https://www.oreilly.com/library/view/wiley-gaap-2008/9780470135136/9780470135136_epstein5136c24-sec1-0003.html">Wiley GAAP 2008: Concepts, rules and examples</a> (statement of changes in net worth optional; accrual basis; order of liquidity)</p></li><li><p>Nest Egg Lab, <a href="https://nestegglab.github.io/concepts.html">Guiding concepts</a> and <a href="https://nestegglab.github.io/papers/hidden-dynasties.html">Hidden Dynasties</a></p></li></ul>
+<p><strong>Sources added for purpose-built accounts and related parties</strong></p>
+<ul><li><p><a href="https://uscode.house.gov/us/usc/119-120/t26/s530A/">26 U.S.C. § 530A, Trump accounts</a>; <a href="https://www.congress.gov/crs-product/R48910">CRS, Trump Accounts: Overview and Policy Considerations</a>; <a href="https://www.dol.gov/agencies/ebsa/employers-and-advisers/guidance/technical-releases/26-02">US Department of Labor, Technical Release 2026-02</a>; <a href="https://taxnews.ey.com/news/2026-2417-trump-account-temporary-regulations-provide-guidance-for-tax-exempt-organizations-private-foundations-and-donor-advised-funds-making-general-funding-contributions">EY on temporary regulations TD 10056</a>; <a href="https://www.federalregister.gov/documents/2026/08/21/2026-17123/guidance-on-eligible-investments-for-trump-accounts">Federal Register, Guidance on Eligible Investments for Trump Accounts</a></p></li><li><p><a href="https://thelink.ascensus.com/articles/2025/9/17/when-and-how-do-retirement-savings-and-spousal-consent-intersect">Ascensus on retirement savings and spousal consent</a>; <a href="https://www.nolo.com/legal-encyclopedia/if-you-don-t-want-leave-retirement-accounts-your-spouse.html">Nolo on leaving retirement accounts to someone other than a spouse</a></p></li><li><p><a href="https://529.wa.gov/get/roth-ira">Washington 529 on Roth rollovers</a>; <a href="https://www.kitces.com/blog/529-to-roth-ira-rollover-retirement-saving-education-planning-secure-2-0-backdoor-roth/">Kitces on 529-to-Roth rollovers</a></p></li><li><p><a href="https://dart.deloitte.com/USDART/tree/vsid/490090">Deloitte DART, ASC 850 Related Party Disclosures</a>; <a href="https://viewpoint.pwc.com/dt/us/en/pwc/accounting_guides/financial_statement_/financial_statement___18_US/chapter_26_related_p_US/262_scope_and_releva_US.html">PwC Viewpoint on ASC 850 scope</a></p></li><li><p><a href="https://www.law.cornell.edu/uscode/text/26/7872">26 U.S.C. § 7872, below-market loans</a></p></li><li><p><a href="../briefs/personal-financial-statements.html">Nest Egg Lab Brief 1 (draft)</a>, for ASC 274, section 7520 tables and the research on earmarking</p></li></ul>
+<p><strong>Disclosure.</strong> Written by Richard Berk, who founded Nest Egg Lab and also founded Later Plans LLC, a company building a service that helps families talk through later-life decisions. The draft is held by the author personally. Claude, an AI model made by Anthropic, helped draft it; the author is responsible for its choices.</p>
+<p><strong>What this is not.</strong> Not accounting, tax, legal or investment advice. A statement prepared under these rules by an assistant has not been checked by a professional unless it says so.</p>
+</section>
+  <section>
+    <div class="disclose">
+      <p><strong>Cite as:</strong> Berk, R. (2026). <i>Family financial statements: concepts paper</i>, draft 0.1. Nest Egg Lab.</p>
+      <p>Comments are welcome: <a href="mailto:richard.berk@nestegglab.org">richard.berk@nestegglab.org</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><a href="../">← Nest Egg Lab</a> · <a href="../family-office.html">A family office for every nest egg</a> · <a href="../briefs/personal-financial-statements.html">Brief 1</a> · © 2026 Nest Egg Lab</div>
+</footer>
+</body>
+</html>
