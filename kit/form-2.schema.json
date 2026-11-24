@@ -1,0 +1,484 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nestegglab.github.io/kit/form-2.schema.json",
+  "title": "Form 2: What we own and owe (draft 0.1)",
+  "description": "One person's statement under the Nest Egg Lab draft rules for family financial statements. Values are what a buyer would pay as the item stands; only the person's measured share is recorded. Not accounting, tax or legal advice.",
+  "type": "object",
+  "required": [
+    "about",
+    "assets",
+    "debts",
+    "tax",
+    "summary",
+    "related_parties",
+    "purpose_built_accounts",
+    "flags",
+    "documents",
+    "closing_line"
+  ],
+  "properties": {
+    "about": {
+      "type": "object",
+      "required": [
+        "whose",
+        "as_of",
+        "prepared_by",
+        "checked_by_professional"
+      ],
+      "properties": {
+        "whose": {
+          "type": "string"
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "prepared_by": {
+          "type": "string"
+        },
+        "checked_by_professional": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "null if not checked; otherwise name and date"
+        }
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item",
+          "kind",
+          "value",
+          "value_basis",
+          "value_date",
+          "title",
+          "later_benefit",
+          "decision",
+          "purpose",
+          "source"
+        ],
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "cash",
+              "retirement account",
+              "education account",
+              "child's account",
+              "investment",
+              "home",
+              "other real estate",
+              "business interest",
+              "life insurance",
+              "receivable from family",
+              "other"
+            ]
+          },
+          "institution": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_four": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9A-Za-z]{4}$"
+          },
+          "measured_share_pct": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "value": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "value_basis": {
+            "enum": [
+              "statement",
+              "appraisal",
+              "public estimate",
+              "assessed value",
+              "owner's estimate",
+              "assistant's estimate"
+            ]
+          },
+          "value_date": {
+            "type": "string"
+          },
+          "title": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "later_benefit": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "who",
+                "by"
+              ],
+              "properties": {
+                "who": {
+                  "type": "string"
+                },
+                "share_pct": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "by": {
+                  "enum": [
+                    "form",
+                    "will",
+                    "law",
+                    "trust"
+                  ]
+                }
+              }
+            }
+          },
+          "decision": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "who",
+                "when"
+              ],
+              "properties": {
+                "who": {
+                  "type": "string"
+                },
+                "when": {
+                  "enum": [
+                    "now",
+                    "if incapacity"
+                  ]
+                }
+              }
+            }
+          },
+          "purpose": {
+            "type": "string",
+            "description": "Owner's words, 'by law: <rule>', or 'not stated'"
+          },
+          "source": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "File names of the documents this entry came from"
+          }
+        }
+      }
+    },
+    "debts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item",
+          "lender",
+          "balance",
+          "balance_date",
+          "owed_to_family",
+          "source"
+        ],
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "lender": {
+            "type": "string"
+          },
+          "last_four": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9A-Za-z]{4}$"
+          },
+          "balance": {
+            "type": "number"
+          },
+          "rate_pct": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "balance_date": {
+            "type": "string"
+          },
+          "owed_to_family": {
+            "type": "boolean"
+          },
+          "source": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "File names of the documents this entry came from"
+          }
+        }
+      }
+    },
+    "tax": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "item",
+          "value"
+        ],
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          },
+          "tax_basis": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "taxable_amount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "rate_assumed_pct": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "estimated_tax": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "null if the tax basis is unknown"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "total_assets",
+        "total_debts",
+        "assets_less_debts_before_tax",
+        "estimated_tax",
+        "net_worth"
+      ],
+      "properties": {
+        "total_assets": {
+          "type": "number"
+        },
+        "total_debts": {
+          "type": "number"
+        },
+        "assets_less_debts_before_tax": {
+          "type": "number"
+        },
+        "estimated_tax": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "net_worth": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "A number only if every tax row is complete; otherwise the string 'not stated'"
+        }
+      }
+    },
+    "related_parties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "with",
+          "direction",
+          "amount",
+          "evidence"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "loan",
+              "gift",
+              "contribution to another's account",
+              "shared title",
+              "guarantee",
+              "use of property",
+              "care and time",
+              "promise"
+            ]
+          },
+          "with": {
+            "type": "string"
+          },
+          "direction": {
+            "enum": [
+              "to",
+              "from",
+              "shared"
+            ]
+          },
+          "amount": {
+            "type": [
+              "number",
+              "string"
+            ],
+            "description": "A number, or 'not priced'"
+          },
+          "since": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "confirmed_by_other": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "purpose_built_accounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "account",
+          "owner",
+          "controller_until_release",
+          "release"
+        ],
+        "properties": {
+          "account": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "controller_until_release": {
+            "type": "string"
+          },
+          "release": {
+            "type": "string"
+          },
+          "contributions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "number"
+                },
+                "creates_basis": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "item",
+          "detail",
+          "next_step"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "gap",
+              "conflict",
+              "stale",
+              "estimate",
+              "professional check",
+              "refused instruction"
+            ]
+          },
+          "item": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "next_step": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "file",
+          "date"
+        ],
+        "properties": {
+          "file": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "supports": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "closing_line": {
+      "const": "Prepared by an AI assistant from the documents listed in section H. Not checked by a professional."
+    }
+  }
+}

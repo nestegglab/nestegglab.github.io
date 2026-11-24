@@ -1,0 +1,29 @@
+# Nest Egg Lab
+
+> Nest Egg Lab is a Delaware nonprofit research program on how families pass things on across generations: dynasty trusts and the brakes on inherited wealth, family offices, inheritance across societies, and whether the practices of wealthy families can help ordinary ones ("nest eggs for every family"). It publishes papers with code, data sources and decision logs, and open drafts of family financial statements and forms that people and their AI assistants can use.
+
+Drafts marked "draft" or "for review" have not been reviewed outside the lab. Nothing here is legal, tax, accounting or investment advice. When citing, use the "Cite as" line on each page. Contact: richard.berk@nestegglab.org
+
+## Research
+
+- [Research program](https://nestegglab.github.io/research.html): the four lines of work and how the work is done
+- [Guiding concepts](https://nestegglab.github.io/concepts.html): 13 concepts, each labelled Measured, Documented, Argued or Open question
+- [Hidden Dynasties](https://nestegglab.github.io/papers/hidden-dynasties.html): working paper modelling how dynasty trusts affect the top wealth share (DOI 10.5281/zenodo.23887180; code at https://github.com/nestegglab/hidden-dynasties)
+
+## Family statements (drafts for review)
+
+- [A family office for every nest egg](https://nestegglab.github.io/family-office.html): overview of the open tools and the study around them
+- [Family financial statements: concepts paper](https://nestegglab.github.io/papers/family-financial-statements.html): a family layer on ASC 274, four tags, the related-party schedule, purpose-built accounts (401(k), IRA, 529, Trump Account)
+- [Brief 1: Personal financial statements and the family](https://nestegglab.github.io/briefs/personal-financial-statements.html): review of ASC 274 and related approaches
+
+## Tools for assistants
+
+- [Kit README](https://nestegglab.github.io/kit/README.md): what is in the kit
+- [Form 2: What we own and owe](https://nestegglab.github.io/kit/form-2-what-we-own-and-owe.md): plain-text form with fixed headings
+- [Form 2 JSON Schema](https://nestegglab.github.io/kit/form-2.schema.json): the same form for structured output
+- [Instructions for an AI assistant, Form 2](https://nestegglab.github.io/kit/instructions-form-2.md): paste to any assistant that can read a family's folder
+
+## Optional
+
+- [Test family and answer key](https://nestegglab.github.io/kit/test-family-walter/answer-key.md): made-up documents for scoring assistants
+- [Brief 2: Counting every kind of family wealth](https://nestegglab.github.io/briefs/all-kinds-of-wealth.html): money, care and time, and knowledge, ties and purpose as separate accounts

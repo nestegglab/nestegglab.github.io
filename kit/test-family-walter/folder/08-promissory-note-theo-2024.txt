@@ -1,0 +1,8 @@
+PROMISSORY NOTE  (fictional)
+Date: August 1, 2024
+Borrower: Theo Example.  Lender: Walter Example
+Principal: $30,000, for a house deposit
+Interest: 2.0% per year, simple
+Repayment: in full by August 1, 2034, or earlier
+Signed by both parties.
+Balance confirmed by Walter on November 15, 2026: $30,000 (no payments yet)

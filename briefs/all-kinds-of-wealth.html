@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Counting Every Kind of Family Wealth · Nest Egg Lab Brief</title>
+<meta name="description" content="How the triple bottom line, integrated reporting, comprehensive national wealth, household production accounts and family-office practice count wealth that is not money, and a proposal for a family statement with three accounts.">
+<link rel="canonical" href="https://nestegglab.github.io/briefs/all-kinds-of-wealth.html">
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg: #fbfaf7; --surface: #ffffff; --ink: #1d2422; --muted: #5b6662;
+    --line: #e4e1d9; --accent: #2f6b55; --accent-soft: #e6f0eb; --max: 760px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141816; --surface: #1b201e; --ink: #e8ece9; --muted: #a3ada8;
+      --line: #2c3431; --accent: #7fc0a4; --accent-soft: #1f2d27;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 16px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  header { padding: 48px 0 30px; border-bottom: 1px solid var(--line); }
+  .brand { font: 600 15px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+  .kicker { font: 600 13px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--muted); margin: 22px 0 0; }
+  h1 { font-size: 36px; line-height: 1.18; margin: 10px 0 14px; font-weight: 600; }
+  .lede { font-size: 20px; color: var(--muted); margin: 0 0 14px; }
+  .meta { color: var(--muted); font-size: 15px; }
+  section { padding: 34px 0; border-bottom: 1px solid var(--line); }
+  h2 { font: 600 13px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+  h3 { font-size: 20px; margin: 22px 0 8px; font-weight: 600; }
+  h3:first-of-type { margin-top: 0; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  .keys { background: var(--accent-soft); border-radius: 10px; padding: 20px 22px; }
+  .keys ol { margin: 0; padding-left: 22px; }
+  .keys li { margin-bottom: 10px; }
+  .keys li:last-child { margin-bottom: 0; }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 8px 16px; font: 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin-top: 18px; }
+  nav.toc a { text-decoration: none; }
+  .tbl { overflow-x: auto; margin: 4px 0 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--line); }
+  th { font: 600 12px/1.3 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+  td:first-child { font-weight: 600; }
+  ul.brakes { list-style: none; padding: 0; margin: 0 0 14px; }
+  ul.brakes li { padding: 10px 14px 10px 16px; border-left: 3px solid var(--accent); margin-bottom: 10px; background: var(--surface); border-radius: 0 6px 6px 0; }
+  ul.brakes strong { display: block; font-size: 17px; }
+  ul.brakes span { color: var(--muted); font-size: 15px; }
+  .timeline { list-style: none; padding: 0; margin: 0 0 14px; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 14px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -6px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+  .timeline b { font: 600 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; display: block; color: var(--accent); }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin: 0 0 12px; }
+  details > summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 20px; font-size: 19px; font-weight: 600; position: relative; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font: 400 24px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--accent); }
+  details[open] > summary::after { content: "\2212"; }
+  details > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 10px; }
+  details .sub { display: block; font-size: 15px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  details .body { padding: 0 20px 18px; }
+  .ev { display: inline-block; font: 600 11px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; margin: 2px 0 10px; }
+  .src { color: var(--muted); font-size: 14px; }
+  ol.refs { padding-left: 22px; font-size: 15px; }
+  ol.refs li { margin-bottom: 8px; }
+  .disclose { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; font-size: 15px; }
+  .disclose p:last-child { margin-bottom: 0; }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 640px) {
+    h1 { font-size: 28px; } .lede { font-size: 18px; } header { padding-top: 36px; }
+    table { font-size: 14px; }
+  }
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="../">Nest Egg Lab</a>
+    <p class="kicker">Brief 2 · Draft for review</p>
+    <h1>Counting every kind of family wealth</h1>
+    <p class="lede">How business, national accounts and family-office practice record wealth that is not money, and a proposal for a family statement with three accounts: money, care and time, and what the family knows, holds together and stands for.</p>
+    <p class="meta">Richard Berk (<a href="https://orcid.org/0009-0004-5344-4614">ORCID 0009-0004-5344-4614</a>) · Nest Egg Lab · November 2026 · Follows <a href="personal-financial-statements.html">Brief 1</a> and the <a href="../papers/family-financial-statements.html">family financial statements</a> concepts paper</p>
+    <nav class="toc" aria-label="Sections">
+      <a href="#key-points">Key points</a><a href="#why">Why money is not enough</a><a href="#others">How others count</a><a href="#lessons">Lessons</a><a href="#proposal">Three accounts</a><a href="#open">Open questions</a><a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="key-points">
+    <h2>Key points</h2>
+    <div class="keys">
+      <ol>
+        <li><strong>A family passes on more than money.</strong> The lab&rsquo;s research distinguishes material, embodied and relational wealth. A statement of money alone shows the first and misses the other two.</li>
+        <li><strong>Others have tried to count more.</strong> Business has the triple bottom line and integrated reporting&rsquo;s six capitals. National accounts have comprehensive wealth and a satellite account for unpaid household work. Family-office practice has &ldquo;qualitative capital&rdquo;.</li>
+        <li><strong>The common lesson is: separate accounts, not one number.</strong> The approaches that last keep each kind of capital in its own terms and avoid implying that a loss in one can be made up by a gain in another.</li>
+        <li><strong>Price only where a convention exists.</strong> Unpaid care can be given a replacement cost, as national statisticians do. Knowledge, relationships and purpose are better described than priced.</li>
+        <li><strong>Proposal: a core statement plus two satellite accounts.</strong> Money stays on the core statement under the lab&rsquo;s draft rules. Care and time, and what the family knows, holds together and stands for, sit beside it in their own units.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>1. Why money is not enough</h2>
+    <p>The lab&rsquo;s <a href="../concepts.html">guiding concepts</a> distinguish three kinds of inheritance. Material wealth, such as land and money, passes most easily. Embodied wealth (skill, knowledge, health) and relational wealth (ties, standing, a family&rsquo;s name) have to be rebuilt in every generation. The concepts also note that family practice, not structure alone, seems to be what keeps a family&rsquo;s wealth together.</p>
+    <p>The lab&rsquo;s <a href="../papers/family-financial-statements.html">family financial statements</a> are built for the first kind. They already record care, use of property and promises in a related-party schedule, but deliberately without prices. This brief asks how to give the other kinds of wealth a proper place on the statement without pretending they are money.</p>
+    <span class="ev">Argued</span>
+  </section>
+
+  <section id="others">
+    <h2>2. How others count more than money</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Approach</th><th>Who it is for</th><th>What it counts</th><th>How it measures</th></tr></thead>
+        <tbody>
+          <tr><td>Triple bottom line (1994)</td><td>Companies</td><td>People, planet, profit</td><td>Three separate bottom lines; no agreed method</td></tr>
+          <tr><td>Integrated reporting, six capitals (2013, revised 2021)</td><td>Companies and their investors</td><td>Financial, manufactured, intellectual, human, social and relationship, natural</td><td>Principles, not a measurement standard; quantitative and qualitative</td></tr>
+          <tr><td>Comprehensive wealth (World Bank)</td><td>Countries</td><td>Produced, natural and human capital, net foreign assets</td><td>Money values; since 2024, allows for limited substitution between kinds</td></tr>
+          <tr><td>Household production account (US BEA)</td><td>National accounts</td><td>Unpaid work at home: cooking, cleaning, childcare</td><td>Hours from time-use surveys, valued at domestic workers&rsquo; wages; kept outside GDP</td></tr>
+          <tr><td>Qualitative capital (family-office practice)</td><td>Wealthy families</td><td>Human, intellectual, social, legacy or spiritual, and financial capital</td><td>Questions and practices; a &ldquo;balance sheet&rdquo; as a conversation tool</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <details>
+      <summary>The triple bottom line<span class="sub">And its inventor&rsquo;s recall</span></summary>
+      <div class="body">
+        <p>John Elkington coined the term in 1994. It asks that firms be judged on social, environmental and economic results, the &ldquo;three Ps&rdquo; of people, planet and profit. Elkington meant it to change how capitalism works. In 2018, near its 25th anniversary, he announced a &ldquo;recall&rdquo; of his own concept for rethinking, and later worked on how markets can address multiple capitals.</p>
+        <p>For families, the lesson is that a third and second bottom line are easy to name and hard to keep honest. Without rules for measuring them, they become slogans beside the one bottom line that has rules.</p>
+        <span class="ev">Documented</span>
+      </div>
+    </details>
+    <details>
+      <summary>Integrated reporting&rsquo;s six capitals<span class="sub">Stocks of value an organisation uses and affects</span></summary>
+      <div class="body">
+        <p>The International Integrated Reporting Framework, first issued in 2013 and revised in 2021, is now maintained by the IFRS Foundation. It treats capitals as stocks of value that an organisation&rsquo;s activities increase, decrease or transform, in six categories: financial, manufactured, intellectual, human, social and relationship, and natural. It is a set of principles rather than a measurement standard, and expects a mix of numbers and narrative.</p>
+        <p>Its most useful idea for families is the word <em>stock</em>. Each kind of capital is something that can grow or run down over time, not just a result for one year.</p>
+        <span class="ev">Documented</span>
+      </div>
+    </details>
+    <details>
+      <summary>Comprehensive wealth of nations<span class="sub">The World Bank and the problem of substitution</span></summary>
+      <div class="body">
+        <p>The World Bank&rsquo;s Changing Wealth of Nations series measures a country&rsquo;s wealth as produced, natural and human capital plus net foreign assets, as a check on whether growth can last. Human capital turned out to be the largest part of global wealth.</p>
+        <p>Its 2024 edition changed one assumption. Earlier editions implicitly treated all assets as substitutes, so a loss of forests could be made up by building roads. The new method allows for limited substitution, because some assets are becoming scarce. A family faces the same question: can money make up for care that is no longer given? The safe answer is not to assume it can.</p>
+        <span class="ev">Documented</span>
+      </div>
+    </details>
+    <details>
+      <summary>Unpaid work in the national accounts<span class="sub">A satellite account, kept beside GDP</span></summary>
+      <div class="body">
+        <p>GDP leaves out unpaid work at home. The US Bureau of Economic Analysis estimates it separately in a household production satellite account, using time-use surveys for hours and the wages of general-purpose domestic workers for value. Including it would have raised nominal GDP by 39% in 1965 and 26% in 2010.</p>
+        <p>Two ideas carry over directly. A <em>satellite account</em> adds information beside the core account without changing it. And there is a public, checkable convention for putting a price on hours of care when a family wants one.</p>
+        <span class="ev">Documented</span>
+      </div>
+    </details>
+    <details>
+      <summary>Qualitative capital in family-office practice<span class="sub">Wealth as well-being</span></summary>
+      <div class="body">
+        <p>James E. Hughes Jr., whose <i>Family Wealth: Keeping It in the Family</i> shaped modern family governance, argues that a family&rsquo;s wealth is mainly its human and intellectual capital and only secondarily its money. His later work with Susan Massenzio and Keith Whitaker names five capitals: human, intellectual, social, legacy (or spiritual) and financial. Hughes has described a family balance sheet that lists these capitals as a humane tool for understanding a family.</p>
+        <p>This is the practice wealthy families already use. It has no common rules for evidence or measurement, which is the gap a public framework could fill.</p>
+        <span class="ev">Documented; practice, not research</span>
+      </div>
+    </details>
+  </section>
+
+  <section id="lessons">
+    <h2>3. Five lessons for a family statement</h2>
+    <ul class="brakes">
+      <li><strong>Separate accounts, no grand total</strong><span>Each kind of wealth keeps its own unit. Nothing on the statement implies that money can make up for care or for relationships.</span></li>
+      <li><strong>Stocks, and changes in them</strong><span>Each account shows where the family stands and what has grown or run down since the last statement.</span></li>
+      <li><strong>Price only by a public convention</strong><span>Care hours may carry a replacement cost by the national statisticians&rsquo; method, labelled as such. Nothing else is priced.</span></li>
+      <li><strong>Evidence, even when it is not money</strong><span>Hours from a diary, a skill someone has actually taught, a meeting that actually happened. The same rule as for money: say where each entry came from.</span></li>
+      <li><strong>Satellites beside the core</strong><span>The money statement keeps its accounting rules. The other accounts sit beside it and never change its figures.</span></li>
+    </ul>
+    <span class="ev">Argued</span>
+  </section>
+
+  <section id="proposal">
+    <h2>4. Proposal: one family statement, three accounts</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Account</th><th>Kind of wealth</th><th>Unit</th><th>What it records</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>Money (core)</td><td>Material</td><td>Dollars, under ASC 274 and the lab&rsquo;s draft rules</td><td>Each person&rsquo;s statement, the related-party schedule, purpose-built accounts such as nest eggs</td><td>Statements, deeds, forms</td></tr>
+          <tr><td>Care and time (satellite)</td><td>Embodied, given</td><td>Hours; optional replacement cost, labelled</td><td>Who gives care to whom, how much, since when, what it replaces, any payment or promise</td><td>Diaries, calendars, the people involved</td></tr>
+          <tr><td>Knowledge, ties and purpose (satellite)</td><td>Embodied and relational</td><td>Descriptions and yes/no indicators</td><td>Who knows how to do what; who holds which roles; what the family does together; what it says it stands for</td><td>Records, meeting notes, the family&rsquo;s own words</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The third account can be kept short and checkable with a few plain questions, each answered yes, no or not yet, with the evidence noted:</p>
+    <ul>
+      <li>Does more than one person know where everything is? (Form 1 exists and is shared.)</li>
+      <li>Has the family met about money or care in the last year? (A meeting record exists.)</li>
+      <li>Has each adult been taught to read their own statement?</li>
+      <li>Does each nest egg have someone, other than its controller, who understands it?</li>
+      <li>Has the family written down what it wants its money to be for?</li>
+    </ul>
+    <p>The questions measure practice, not virtue. They can be answered from records, they change over time, and they point to what to do next. That fits the lab&rsquo;s nest-egg question: whether the practice of wealthy families, not only their capital, can help ordinary ones.</p>
+    <span class="ev">Open question</span>
+  </section>
+
+  <section id="open">
+    <h2>5. Open questions</h2>
+    <ul class="brakes">
+      <li><strong>Should care ever carry a price?</strong><span>A price makes care comparable to money and may help fairness between siblings. It may also turn care into a bargaining chip. The proposal makes it optional and labelled.</span></li>
+      <li><strong>Who answers the third account?</strong><span>Each person, the family together, or both? Different answers from different members may be the most useful information.</span></li>
+      <li><strong>Can it be tested?</strong><span>The lab&rsquo;s method calls for predictions recorded before results. A test would ask whether families keeping all three accounts make decisions the decision owner recognises as theirs, more often than families keeping money alone.</span></li>
+      <li><strong>What stays private?</strong><span>The same rule as money: each entry is shared only if the people in it agree.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="disclose">
+      <p><strong>About this brief.</strong> Written by Richard Berk, who founded Nest Egg Lab and also founded Later Plans LLC, a company building a service that helps families talk through later-life decisions. Claude, an AI model made by Anthropic, helped research and draft it; the author is responsible for its content. Descriptions of the frameworks above are drawn from their publishers and secondary sources listed below. Not financial, tax or legal advice.</p>
+      <p><strong>Cite as:</strong> Berk, R. (2026). <i>Counting every kind of family wealth</i>. Nest Egg Lab Brief 2 (draft).</p>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <ol class="refs">
+      <li>Elkington, J. (2018). <a href="https://hbr.org/2018/06/25-years-ago-i-coined-the-phrase-triple-bottom-line-heres-why-im-giving-up-on-it">25 years ago I coined the phrase &ldquo;triple bottom line.&rdquo; Here&rsquo;s why it&rsquo;s time to rethink it</a>. <i>Harvard Business Review</i>; Elkington (2018), <a href="https://medium.com/volans/25-years-ago-i-coined-the-phrase-triple-bottom-line-heres-why-it-s-time-to-rethink-it-d47f02ce3e34">follow-up note</a>.</li>
+      <li>HEC Paris S&amp;O Institute. <a href="https://www.hec.edu/en/faculty-research/centers/sustainability-organizations-institute/think/so-institute-executive-factsheets/what-triple-bottom-line">What is the &ldquo;triple bottom line&rdquo;?</a></li>
+      <li>IFRS Foundation. <a href="https://www.ifrs.org/issued-standards/integrated-reporting/">Integrated Reporting</a> and <a href="https://www.ifrs.org/issued-standards/integrated-reporting/framework/">Integrated Reporting Framework</a>; <a href="https://integratedreporting.ifrs.org/?p=17799">Get to grips with the six capitals</a>; ACCA, <a href="https://www.accaglobal.com/uk/en/student/exam-support-resources/prodipsust-study-resources/technical-articles/integrated-report-framework.html">The integrated reporting framework</a>.</li>
+      <li>World Bank (2024). <a href="https://www.worldbank.org/en/publication/the-changing-wealth-of-nations"><i>The Changing Wealth of Nations 2024</i></a>; <a href="https://blogs.worldbank.org/en/developmenttalk/revisiting-comprehensive-wealth--insights-from-the-changing-weal">Revisiting comprehensive wealth</a>; World Bank (2018), <a href="https://www.worldbank.org/en/news/feature/2018/01/30/moving-beyond-gdp-to-look-at-the-world-through-the-lens-of-wealth">Moving beyond GDP</a>.</li>
+      <li>US Bureau of Economic Analysis. <a href="https://bea.gov/data/special-topics/household-production">Household production economic statistics</a>; <a href="https://www.bea.gov/taxonomy/term/886">How does BEA measure household production?</a>; Bridgman et al. (2012), <a href="https://apps.bea.gov/scb/pdf/2012/05%20May/0512_household.pdf">Accounting for household production in the national accounts, 1965&ndash;2010</a>.</li>
+      <li>Hughes, J. E. Jr. (2004). <a href="https://www.oreilly.com/library/view/family-wealth/9781576601518/pr06.html"><i>Family Wealth: Keeping It in the Family</i></a>, revised edition; Hughes, Massenzio and Whitaker (2022), <a href="https://oreilly.com/library/view/complete-family-wealth/9781119820031"><i>Complete Family Wealth</i></a>, 2nd edition; J.P. Morgan, <a href="https://www.jpmorgan.com/insights/family-legacy/family-engagement-and-governance/redefining-family-wealth-as-well-being">Redefining family wealth as well-being</a>.</li>
+      <li>Nest Egg Lab. <a href="../concepts.html">Guiding concepts</a>; <a href="../papers/family-financial-statements.html">Family financial statements: concepts paper</a>.</li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><a href="../">← Nest Egg Lab</a> · <a href="../family-office.html">A family office for every nest egg</a> · <a href="personal-financial-statements.html">Brief 1</a> · © 2026 Nest Egg Lab</div>
+</footer>
+</body>
+</html>

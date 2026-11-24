@@ -1,0 +1,11 @@
+FIRST EXAMPLE BANK  (fictional)
+Monthly statement, October 1 to October 31, 2026
+
+Account holders: WALTER EXAMPLE and NINA EXAMPLE
+Account type: Joint checking, with right of survivorship
+Account number: 4400-1187-2291-0458
+
+Opening balance      $23,410.17
+Deposits              $3,120.00   (Pension deposit, Social Security deposit)
+Withdrawals           $2,530.17
+Closing balance      $24,000.00
