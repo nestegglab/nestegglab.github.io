@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personal Financial Statements and the Family · Nest Egg Lab Brief</title>
+<meta name="description" content="What the US accounting standard for personal financial statements (ASC 274) does, where it is under pressure, how other fields measure household wealth, and what that means for statements built for families.">
+<link rel="canonical" href="https://nestegglab.github.io/briefs/personal-financial-statements.html">
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg: #fbfaf7; --surface: #ffffff; --ink: #1d2422; --muted: #5b6662;
+    --line: #e4e1d9; --accent: #2f6b55; --accent-soft: #e6f0eb; --max: 760px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141816; --surface: #1b201e; --ink: #e8ece9; --muted: #a3ada8;
+      --line: #2c3431; --accent: #7fc0a4; --accent-soft: #1f2d27;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 16px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  header { padding: 48px 0 30px; border-bottom: 1px solid var(--line); }
+  .brand { font: 600 15px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+  .kicker { font: 600 13px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--muted); margin: 22px 0 0; }
+  h1 { font-size: 36px; line-height: 1.18; margin: 10px 0 14px; font-weight: 600; }
+  .lede { font-size: 20px; color: var(--muted); margin: 0 0 14px; }
+  .meta { color: var(--muted); font-size: 15px; }
+  section { padding: 34px 0; border-bottom: 1px solid var(--line); }
+  h2 { font: 600 13px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+  h3 { font-size: 20px; margin: 22px 0 8px; font-weight: 600; }
+  h3:first-of-type { margin-top: 0; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  .keys { background: var(--accent-soft); border-radius: 10px; padding: 20px 22px; }
+  .keys ol { margin: 0; padding-left: 22px; }
+  .keys li { margin-bottom: 10px; }
+  .keys li:last-child { margin-bottom: 0; }
+  nav.toc { display: flex; flex-wrap: wrap; gap: 8px 16px; font: 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin-top: 18px; }
+  nav.toc a { text-decoration: none; }
+  .tbl { overflow-x: auto; margin: 4px 0 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--line); }
+  th { font: 600 12px/1.3 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+  td:first-child { font-weight: 600; }
+  ul.brakes { list-style: none; padding: 0; margin: 0 0 14px; }
+  ul.brakes li { padding: 10px 14px 10px 16px; border-left: 3px solid var(--accent); margin-bottom: 10px; background: var(--surface); border-radius: 0 6px 6px 0; }
+  ul.brakes strong { display: block; font-size: 17px; }
+  ul.brakes span { color: var(--muted); font-size: 15px; }
+  .timeline { list-style: none; padding: 0; margin: 0 0 14px; border-left: 2px solid var(--line); }
+  .timeline li { position: relative; padding: 0 0 14px 22px; }
+  .timeline li::before { content: ""; position: absolute; left: -6px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+  .timeline b { font: 600 14px/1.4 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; display: block; color: var(--accent); }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; margin: 0 0 12px; }
+  details > summary { cursor: pointer; list-style: none; padding: 16px 48px 16px 20px; font-size: 19px; font-weight: 600; position: relative; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font: 400 24px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--accent); }
+  details[open] > summary::after { content: "\2212"; }
+  details > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 10px; }
+  details .sub { display: block; font-size: 15px; font-weight: 400; color: var(--muted); margin-top: 4px; }
+  details .body { padding: 0 20px 18px; }
+  .ev { display: inline-block; font: 600 11px/1 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; margin: 2px 0 10px; }
+  .src { color: var(--muted); font-size: 14px; }
+  ol.refs { padding-left: 22px; font-size: 15px; }
+  ol.refs li { margin-bottom: 8px; }
+  .disclose { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; font-size: 15px; }
+  .disclose p:last-child { margin-bottom: 0; }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 640px) {
+    h1 { font-size: 28px; } .lede { font-size: 18px; } header { padding-top: 36px; }
+    table { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="../">Nest Egg Lab</a>
+    <p class="kicker">Brief 1 · Draft for review</p>
+    <h1>Personal financial statements and the family</h1>
+    <p class="lede">What the US accounting standard for personal financial statements does, where it is under pressure, how other fields measure household wealth, and what that means for statements built for families.</p>
+    <p class="meta">Richard Berk (<a href="https://orcid.org/0009-0004-5344-4614">ORCID 0009-0004-5344-4614</a>) · Nest Egg Lab · November 2026</p>
+    <nav class="toc" aria-label="Sections">
+      <a href="#key-points">Key points</a><a href="#standard">The standard</a><a href="#rules">How it measures</a><a href="#practice">In practice</a><a href="#pressure">Under pressure</a><a href="#other">Other approaches</a><a href="#families">For families</a><a href="#sources">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="key-points">
+    <h2>Key points</h2>
+    <div class="keys">
+      <ol>
+        <li><strong>There is already a standard.</strong> ASC 274 sets US accounting rules for personal financial statements. It values assets at what they could sell for today, deducts the tax that would be due on the gains, and allows statements for a person, a married couple or a family.</li>
+        <li><strong>It is old and largely unexamined.</strong> It came from an AICPA statement of 1982 and was carried into the FASB&rsquo;s Codification without fresh deliberation. In March 2026 the FASB voted not to revisit it.</li>
+        <li><strong>It was built mainly for outside readers, above all lenders.</strong> Its core question is what a person is worth on one date. It handles joint ownership by counting only each person&rsquo;s beneficial interest, but it has no way to show who stands to inherit, who controls an asset, or what it is meant for.</li>
+        <li><strong>Other fields have faced the same choice of unit.</strong> National statistics count the household, assuming its members share. Studies with person-level data find large wealth gaps inside couples, which a household total hides.</li>
+        <li><strong>A family statement can build on ASC 274 rather than replace it.</strong> Keep its measurement rules, add the questions a family needs answered, and combine statements by agreement rather than by adding them up.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="standard">
+    <h2>1. The standard and where it came from</h2>
+    <p>ASC 274 is the topic of the FASB&rsquo;s Accounting Standards Codification that governs personal financial statements in the United States. Its stated focus is a person&rsquo;s assets and liabilities, and it presents them at estimated current value because that is what its users are said to need: lenders assessing collateral, people doing estate, gift and tax planning, and candidates filing public disclosures.</p>
+    <ul class="timeline">
+      <li><b>1979</b>An AICPA issues paper on personal financial statements, later superseded by the AICPA guide.</li>
+      <li><b>October 1982</b>AICPA Statement of Position 82-1, <i>Accounting and Financial Reporting for Personal Financial Statements</i>, requires estimated current values. Effective for statements dated June 30, 1983 and after.</li>
+      <li><b>1983</b>The AICPA <i>Personal Financial Statements Guide</i> sets out how to compile, review and audit such statements. It is updated through 2008.</li>
+      <li><b>2008&ndash;09</b>The FASB builds its Codification and carries SOP 82-1 in as Topic 274. The Board did not deliberate the content; it codified it.</li>
+      <li><b>August 2024</b>Daniel Tinkelman (Brooklyn College) asks the FASB to reconsider Topic 274, citing ambiguities exposed in the New York civil fraud case against Donald Trump.</li>
+      <li><b>2024&ndash;25</b>The FASB&rsquo;s agenda consultation records requests to move to fair value and improve disclosures. Most respondents rank the topic low priority.</li>
+      <li><b>March 25, 2026</b>The FASB votes not to take up a project. Board members call the current approach more practical and note the guidance came from the AICPA.</li>
+    </ul>
+    <span class="ev">Documented</span>
+  </section>
+
+  <section id="rules">
+    <h2>2. How it measures</h2>
+    <p>The rules below are from SOP 82-1 as reproduced in the AICPA guide; ASC 274 carries them forward. Paragraph numbers are the SOP&rsquo;s.</p>
+    <h3>Whose statement</h3>
+    <p>Statements may be prepared for an individual, a husband and wife, or a family (&para;5). Where a person is one of several joint owners, the statement includes only that person&rsquo;s interest as a beneficial owner, determined under state property law; joint tenancy and community property may need legal advice to sort out (&para;9). A closely held business is shown as one net investment, never mixed with personal items (&para;10).</p>
+    <h3>What each item is worth</h3>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Item</th><th>Measured at</th><th>Para.</th></tr></thead>
+        <tbody>
+          <tr><td>General rule</td><td>Estimated current value: what an item could be exchanged for between an informed, willing buyer and seller, neither compelled</td><td>12</td></tr>
+          <tr><td>Receivables</td><td>Discounted cash expected to be collected</td><td>16</td></tr>
+          <tr><td>Marketable securities</td><td>Quoted closing price; adjusted for large blocks or transfer restrictions</td><td>17&ndash;19</td></tr>
+          <tr><td>Options</td><td>Based on the underlying asset, exercise price and term, if no published price</td><td>20</td></tr>
+          <tr><td>Life insurance</td><td>Cash value less policy loans; face amount disclosed</td><td>21</td></tr>
+          <tr><td>Closely held business</td><td>Net investment at estimated current value; no single method required; buy-sell agreements considered</td><td>22&ndash;23</td></tr>
+          <tr><td>Real estate</td><td>Sales of similar property, discounted cash flows, appraisals or assessed values, among others</td><td>24</td></tr>
+          <tr><td>Intangibles</td><td>Discounted cash flows if estimable; otherwise cost</td><td>25</td></tr>
+          <tr><td>Future interests</td><td>Discounted, but only if fixed or determinable, not contingent on life expectancy or an event, and needing no future service</td><td>26</td></tr>
+          <tr><td>Debts</td><td>Discounted cash to be paid, or less if it can be settled now for less</td><td>27</td></tr>
+          <tr><td>Commitments</td><td>Noncancellable ones meeting the same three tests are liabilities</td><td>28</td></tr>
+          <tr><td>Income taxes</td><td>Estimated tax on the gap between values and tax bases, as if everything were sold on the statement date; shown between liabilities and net worth</td><td>30</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>What must be disclosed</h3>
+    <p>Among other things (&para;31): who the statement covers; that values are estimates; the methods used and any change in them; the nature of jointly owned assets; concentrated holdings; details of closely held businesses; the face amount of life insurance; future rights that did not qualify as assets, such as a pension that depends on living to collect it; and the assumptions behind the tax estimate.</p>
+    <p>The future-interest test matters for families. Many of the things a family most depends on, such as a pension for life or an interest in a trust that pays at a trustee&rsquo;s discretion, fail it. They are disclosed in a note, not counted.</p>
+    <span class="ev">Documented</span>
+  </section>
+
+  <section id="practice">
+    <h2>3. How it is used in practice</h2>
+    <ul class="brakes">
+      <li><strong>Lenders and their forms</strong><span>Banks and the SBA often use their own personal financial statement forms rather than ASC 274 statements. The SBA&rsquo;s Form 413 asks each married applicant&rsquo;s spouse to complete a separate form unless legally separated: in practice a person-level unit.</span></li>
+      <li><strong>Accountants&rsquo; engagements</strong><span>A CPA can prepare, compile, review or audit a personal statement under the AICPA&rsquo;s SSARS and auditing standards. Statements prepared only for a written personal financial plan have long had an exemption, because they often omit disclosures and depart from GAAP.</span></li>
+      <li><strong>Common errors</strong><span>Peer reviewers report preparers measuring personal statements as if they were business statements and failing to disclose valuation methods. The AICPA guide lists leaving out the tax provision as a likely misstatement.</span></li>
+    </ul>
+    <p>No source found for this brief measures how many personal financial statements are prepared each year or by whom. The ones that become public, such as those in the Trump case, are not typical.</p>
+    <span class="ev">Documented; prevalence unknown</span>
+  </section>
+
+  <section id="pressure">
+    <h2>4. Where the standard is under pressure</h2>
+    <p>The New York case turned a quiet corner of accounting into a trial exhibit. The defendant testified that, because GAAP was so flexible, he considered his own statements &ldquo;worthless&rdquo;. Tinkelman&rsquo;s letter to the FASB distils four problems.</p>
+    <details>
+      <summary>&ldquo;Could&rdquo; or &ldquo;would&rdquo;?<span class="sub">Estimated current value is defined nowhere else</span></summary>
+      <div class="body">
+        <p>The term appears nowhere else in the Codification and has no guidance outside Topic 274. The parties disputed whether the amount an item &ldquo;could&rdquo; be exchanged for allows &ldquo;as if&rdquo; values, assuming restrictions lifted or land developed, or must be what a buyer and seller would agree for the asset as it stands. The proposed fix is to use fair value as defined in ASC 820.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Methods or result?<span class="sub">Lists of valuation methods read as permission</span></summary>
+      <div class="body">
+        <p>The implementation guidance lists methods for businesses and real estate, from earnings multiples to assessed values to adjusted cost. The defence argued these lists allow any listed method even when results differ widely from any price a buyer would pay. One defence expert&rsquo;s range for a single valuation ran from $18 million to $800&ndash;900 million depending on method. The proposed fix: methods only approximate the value and cannot be used when the result is clearly outside the plausible range.</p>
+      </div>
+    </details>
+    <details>
+      <summary>&ldquo;Net worth&rdquo; without the tax<span class="sub">The provision that is easiest to leave out</span></summary>
+      <div class="body">
+        <p>Net worth is defined after estimated income tax on unrealised gains. The statements in the case omitted that provision, and the compilation reports flagged the departure without measuring it; the letter estimates the omitted tax in the hundreds of millions. The proposed fix: forbid the term &ldquo;net worth&rdquo; unless the tax is deducted.</p>
+      </div>
+    </details>
+    <details>
+      <summary>Changes in method, one year at a time<span class="sub">Disclosure that only bites with comparatives</span></summary>
+      <div class="body">
+        <p>Changes in valuation method must be disclosed. The defence argued this applies only when comparative statements are presented, and all the statements in the case were single-year. The proposed fix: require disclosure whatever the format.</p>
+      </div>
+    </details>
+    <p>The FASB declined to act. Its staff questioned whether the problems were pervasive, which a project requires, and one member called the current approach more practical and cost-effective. At least one large firm told the FASB it did not support prioritising the topic. The ambiguities therefore stand, and anyone building on ASC 274 has to resolve them for themselves.</p>
+    <span class="ev">Documented</span>
+  </section>
+
+  <section id="other">
+    <h2>5. How other fields approach the same problem</h2>
+    <p>Accounting is not the only field that measures what households own. Each of the approaches below chooses a unit, a value and a view of how members share, and each choice reveals something the others hide.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Approach</th><th>Unit</th><th>How members share</th><th>What it shows a family</th></tr></thead>
+        <tbody>
+          <tr><td>ASC 274</td><td>Person, couple or family</td><td>Joint assets split by beneficial interest under state law</td><td>What each person, or the group, is worth today</td></tr>
+          <tr><td>Household wealth statistics (OECD 2013)</td><td>The household</td><td>Assumed shared, at least in part</td><td>Comparable totals across households and countries</td></tr>
+          <tr><td>Survey of Consumer Finances</td><td>The &ldquo;primary economic unit&rdquo;: the dominant person or couple and their dependants</td><td>Pooled within the unit; independent members excluded</td><td>US household balance sheets over time</td></tr>
+          <tr><td>Person-level surveys (German SOEP)</td><td>The individual</td><td>Measured, not assumed</td><td>Gaps between partners that household totals hide</td></tr>
+          <tr><td>Estate and gift tax</td><td>The transferor and each interest</td><td>Split into present and future interests</td><td>The value of a life estate, a remainder or an annuity, from standard tables</td></tr>
+          <tr><td>Lender forms (SBA 413)</td><td>The applicant; spouse separately</td><td>Not addressed</td><td>Capacity to repay</td></tr>
+          <tr><td>Household accounting and the sociology of money</td><td>The relationship</td><td>Negotiated; money is earmarked</td><td>Who controls money, and what it is for</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <details>
+      <summary>Household statistics: the household as one unit<span class="sub">OECD guidelines and the Survey of Consumer Finances</span></summary>
+      <div class="body">
+        <p>The OECD&rsquo;s 2013 guidelines were the first internationally agreed standard for micro statistics on household wealth, and the OECD&rsquo;s wealth database built on them takes the household as its unit of observation and analysis. National statistics offices that follow them note that although assets may be owned individually, the benefit is shared at least to some extent among members.</p>
+        <p>The Federal Reserve&rsquo;s Survey of Consumer Finances uses a narrower unit, the &ldquo;primary economic unit&rdquo;: the economically dominant individual or couple and those who depend on them. Financially independent adults in the same home are left out.</p>
+        <span class="ev">Documented</span>
+      </div>
+    </details>
+    <details>
+      <summary>Person-level data: what household totals hide<span class="sub">Wealth gaps inside couples</span></summary>
+      <div class="body">
+        <p>Most wealth research rests on the assumption that resources are pooled and shared equally inside the household, largely because person-level data are rare. The German Socio-Economic Panel is an exception. Using it, Sierminska, Frick and Grabka found a gender wealth gap of about &euro;50,000 between married partners, driven mostly by each person&rsquo;s own income and work history. Grabka, Marcus and Sierminska later found men in couples held on average &euro;33,000 more net worth than their partners.</p>
+        <p>For a family statement this is the strongest argument for the person as the unit. Adding a couple&rsquo;s or a family&rsquo;s wealth together erases exactly the differences that shape who can decide what.</p>
+        <span class="ev">Documented</span>
+      </div>
+    </details>
+    <details>
+      <summary>Tax valuation: pricing interests that ASC 274 leaves out<span class="sub">Section 7520 actuarial tables</span></summary>
+      <div class="body">
+        <p>For estate and gift tax, US law already values the interests a family statement struggles with. Annuities, life estates, remainders and reversions are valued as a present value using standard section 7520 actuarial factors, which combine a published interest rate with mortality tables. The IRS publishes the tables free. They do not apply to qualified retirement plans.</p>
+        <p>This offers a ready, checkable method for interests that fail ASC 274&rsquo;s future-interest test, such as a parent&rsquo;s life interest in a home with the remainder to children. It is a tax convention, not a market price, and should be labelled as such.</p>
+        <span class="ev">Documented</span>
+      </div>
+    </details>
+    <details>
+      <summary>Household accounting and the meaning of money<span class="sub">Accounting at home, and earmarking</span></summary>
+      <div class="body">
+        <p>A small accounting literature studies accounting in the home. Walker and Llewellyn argued that the field had ignored the household as unworthy of study, though accounting there has social effects as large as in public institutions. Northcott and Doolin found that simple home budgets and records give people a sense of control and help them justify choices, with little difference between accountants and lay people. Historical work on Australian households found accounting used, among other things, to restrain women&rsquo;s spending. Pahl&rsquo;s studies of couples read their money arrangements as systems of accountability.</p>
+        <p>In sociology, Zelizer showed that families earmark money for particular people and purposes rather than treating every dollar alike, and the US Financial Diaries later documented how often low- and moderate-income households earmark. A statement that records only amounts misses what families most argue about: whose money it is, and what it is for.</p>
+        <span class="ev">Documented; mostly qualitative</span>
+      </div>
+    </details>
+  </section>
+
+  <section id="families">
+    <h2>6. What this means for family financial statements</h2>
+    <p>The lab&rsquo;s draft <a href="../family-office.html">family financial statements</a> start from ASC 274 and add what a family needs. This review suggests six design choices, in order of priority.</p>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Gap or finding</th><th>Design choice</th></tr></thead>
+        <tbody>
+          <tr><td>ASC 274&rsquo;s measurement rules are workable and familiar to accountants</td><td>Adopt them as they stand: estimated current value, the tax provision, the future-interest test and its disclosures. Build a family layer on top, not a rival standard.</td></tr>
+          <tr><td>&ldquo;Could&rdquo; versus &ldquo;would&rdquo; is unresolved</td><td>State the answer: the price a buyer would pay for the asset as it stands, with no &ldquo;as if&rdquo; values. For statements prepared by AI assistants, this matters more, not less.</td></tr>
+          <tr><td>&ldquo;Net worth&rdquo; is reported without tax</td><td>Use the term only when the tax provision is included; otherwise say &ldquo;assets less debts, before tax&rdquo;.</td></tr>
+          <tr><td>Household totals hide gaps between members</td><td>Make the person the unit. Combine only by agreement, side by side.</td></tr>
+          <tr><td>ASC 274 records beneficial ownership today, but not who will benefit later, who decides, or what an asset is for</td><td>Keep ASC 274&rsquo;s beneficial interest as the measured share, and add three tags: expected beneficiaries, decision rights, and purpose. Ground the purpose tag in the research on earmarking.</td></tr>
+          <tr><td>Life and trust interests fail the future-interest test</td><td>Keep them out of the totals as ASC 274 does, but allow an optional value from the section 7520 tables, clearly labelled as a tax convention.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>These are proposals for review, not findings. The next step is to read the codified text of Topic 274 itself, since this brief relies on SOP 82-1 as reproduced by the AICPA and on secondary summaries.</p>
+    <span class="ev">Argued</span>
+  </section>
+
+  <section>
+    <div class="disclose">
+      <p><strong>About this brief.</strong> Written by Richard Berk, who founded Nest Egg Lab and also founded Later Plans LLC, a company building a service that helps families talk through later-life decisions. Claude, an AI model made by Anthropic, helped research and draft it; the author is responsible for its content. The codified text of ASC 274 sits behind the FASB&rsquo;s login and was not read directly for this draft. Not accounting, tax or legal advice.</p>
+      <p><strong>Cite as:</strong> Berk, R. (2026). <i>Personal financial statements and the family</i>. Nest Egg Lab Brief 1 (draft).</p>
+    </div>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <ol class="refs">
+      <li>AICPA Personal Financial Statements Task Force (2008). <a href="https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=1553&amp;context=aicpa_indev"><i>Personal Financial Statements Guide</i>, with conforming changes as of May 1, 2008</a>, reproducing SOP 82-1.</li>
+      <li>AICPA Accounting Standards Division (1982). <a href="https://egrove.olemiss.edu/aicpa_sop/3">SOP 82-1, <i>Accounting and Financial Reporting for Personal Financial Statements</i></a>.</li>
+      <li>AICPA (1990). <a href="https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=1894&amp;context=aicpa_indev">Checklist and illustrative financial statements for personal financial statement engagements</a>.</li>
+      <li>FASB. <a href="https://ag.ny.gov/sites/default/files/2023-10/px-02757-fasb-accounting-standards-codification-overview-background-personal-financial-statements.pdf">ASC 274-10-05, Overview and Background</a> (trial exhibit PX-2757, New York Attorney General).</li>
+      <li>Tinkelman, D. (2024). <a href="https://storage.fasb.org/AR-2024.UNS.002.CITY%20UNIVERSITY%20OF%20NEW%20YORK%20DANIEL%20TINKELMAN.pdf">Request for the FASB to put reconsideration of Codification Section 274 on its agenda</a>. Letter to the FASB, August 15.</li>
+      <li>FASB (2024&ndash;25). <a href="https://storage.fasb.org/ITC%E2%80%94Agenda%20Consultation.pdf">Invitation to Comment: Agenda Consultation</a>.</li>
+      <li>PricewaterhouseCoopers (2025). <a href="https://viewpoint.pwc.com/content/dam/pwc-madison/ditaroot/us/en/pwc/response_letters/response_letters_fas/assets/fasbconsult062025.pdf">Response to the FASB agenda consultation</a>.</li>
+      <li>CFO Dive (2026). <a href="https://www.cfodive.com/news/fasb-votes-against-accounting-project-tied-trump-civil-fraud-case/815740/">FASB votes against project tied to Trump civil fraud case</a>.</li>
+      <li>CPEA (2015). <a href="https://assets.ctfassets.net/rb9cdnjh59cm/jpnkUIX3o5xPaWurpHRrK/4cc7c92f5d0344acd320eaad406b3673/CPEA_report_-_October_2015_-_Personal_Financial_Statements_Peer_Review_Issues.pdf">Personal financial statements peer review issues</a>.</li>
+      <li>Wiley GAAP (2018). <a href="https://www.oreilly.com/library/view/wiley-gaap-2018/9781119396543/c14.xhtml">ASC 274 Personal Financial Statements</a>.</li>
+      <li>US Small Business Administration (2022). <a href="https://www.sba.gov/sites/default/files/2022-08/SBA%20Form%20413%20(7a-504-SBG-WOSB-8a)_8.9.2022-508.pdf">SBA Form 413, Personal Financial Statement</a>.</li>
+      <li>Wiley Practitioner&rsquo;s Guide. <a href="https://www.oreilly.com/library/view/wiley-practitioners-guide/9781118421451/xhtml/Chapter66.html">AR 600: Reporting on personal financial statements included in written personal financial plans</a>; Journal of Accountancy (2014), <a href="https://www.journalofaccountancy.com/issues/2014/dec/ssars-21-compilations-engagements/">SSARS 21</a>.</li>
+      <li>OECD (2013). <a href="https://www.oecd.org/en/publications/guidelines-for-micro-statistics-on-household-wealth_9789264194878-en.html"><i>OECD Guidelines for Micro Statistics on Household Wealth</i></a>; OECD, <a href="https://oecd.org/content/dam/oecd/en/data/datasets/income-and-wealth-distribution-databases/wdd-main-concepts.pdf">Wealth Distribution Database: main concepts</a>; Australian Bureau of Statistics, <a href="https://abs.gov.au/AUSSTATS/abs@.nsf/7d12b0f6763c78caca257061001cc588/7f86243eef7a05fdca257eb50011d13c!OpenDocument">Survey of Income and Housing user guide</a>.</li>
+      <li>Berkeley Young Americans Project (2024). <a href="https://youngamericans.berkeley.edu/wp-content/uploads/2024/05/SCF-Wealth-Brief_052324.pdf">SCF wealth brief</a> (definition of the primary economic unit).</li>
+      <li>Sierminska, E., Frick, J. and Grabka, M. (2010). <a href="https://www.diw.de/de/diw_01.c.454892.de/publikationen/externe_referierte_aufsaetze/2010_0004/examining_the_gender_wealth_gap.html">Examining the gender wealth gap</a>. <i>Oxford Economic Papers</i> 62(4), 669&ndash;690.</li>
+      <li>Grabka, M., Marcus, J. and Sierminska, E. (2013). <a href="https://www.diw.de/documents/publikationen/73/diw_01.c.415907.de/diw_sp0540.pdf">Wealth distribution within couples and financial decision making</a>. SOEPpapers 540.</li>
+      <li>IRS. <a href="https://www.irs.gov/retirement-plans/actuarial-tables">Actuarial tables</a>; 26 CFR <a href="https://www.law.cornell.edu/cfr/text/26/20.2031-7">20.2031-7</a>.</li>
+      <li>Walker, S. and Llewellyn, S. (2000). <a href="https://ideas.repec.org/a/eme/aaajpp/09513579910270129a.html">Accounting at home: some interdisciplinary perspectives</a>. <i>Accounting, Auditing &amp; Accountability Journal</i> 13(4), 425&ndash;449.</li>
+      <li>Northcott, D. and Doolin, B. (2000). <a href="https://www.emerald.com/insight/content/doi/10.1108/09513570010338267/full/html">Home accountants: exploring their practices</a>. <i>AAAJ</i> 13(4); Pahl, J. (2000), Couples and their money, same issue (<a href="https://emeraldinsight.com/insight/publication/issn/0951-3574/vol/13/iss/4">contents</a>).</li>
+      <li>Carnegie, G. and Walker, S. (2007). <a href="https://ideas.repec.org/a/eme/aaajpp/v20y2007i1p41-73.html">Household accounting in Australia</a>. <i>AAAJ</i> 20(1), 41&ndash;73.</li>
+      <li>Zelizer, V. <a href="https://press.princeton.edu/node/58598"><i>The Social Meaning of Money</i></a>. Princeton University Press; Morduch, J. (2017), <a href="https://wagner.nyu.edu/impact/research/publications/economics-and-social-meaning-money">Economics and the social meaning of money</a>.</li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><a href="../">← Nest Egg Lab</a> · <a href="../family-office.html">A family office for every nest egg</a> · <a href="../research.html">Research program</a> · © 2026 Nest Egg Lab</div>
+</footer>
+</body>
+</html>
