@@ -83,3 +83,5 @@ The traditional IRA (owner and controller Walter; withdrawals taxed). Ava's Trum
 | Closing line about professional checking present | 0 (required; missing it fails the run) |
 
 Record predictions before running: which assistants, which checks they will miss most often. The lab's guess, before any run: Later benefit on the joint account (survivorship) and the stale IRA date will be missed most.
+
+© 2026 Richard Berk. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): you may share and adapt this, including commercially, with credit to Richard Berk and Nest Egg Lab.

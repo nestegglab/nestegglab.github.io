@@ -58,3 +58,5 @@ How to behave
 - End with this line: "Prepared by an AI assistant from the documents listed in
   section H. Not checked by a professional."
 ```
+
+© 2026 Richard Berk. Licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): you may share and adapt this, including commercially, with credit to Richard Berk and Nest Egg Lab.
